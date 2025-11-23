@@ -15,11 +15,6 @@ theme: default
   }
 </style>
 
-Below is a **minimal, clean version of the notes** following your refined outline, with the *toroidal geometry section removed*.
-I’ve added **placeholders** for equations, diagrams, and interactive HTML widgets — clearly labeled so you can fill them later.
-
-Everything is written to preserve the narrative flow and avoid unnecessary elaboration.
-
 ---
 
 # **Music Theory Fundamentals: A Minimal Narrative**
