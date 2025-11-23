@@ -1,0 +1,6 @@
+site_name: Musifold
+
+nav:
+  - Overview: index.md
+  - Tutorials:
+      - Fundamentals: tutorials/fundamentals/fundamentals.md

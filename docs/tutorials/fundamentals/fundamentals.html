@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>draft</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<style>
+  body {
+    background: #fafafa;
+    font-family: sans-serif;
+    width: 800px;
+    margin: 0 auto; /* centers the page */
+  }
+  h1 {
+    color: red;
+  }
+</style>
+<h1 id="music-theory-fundamentals-a-minimal-narrative"><strong>Music
+Theory Fundamentals: A Minimal Narrative</strong></h1>
+<hr />
+<h1 id="why-music-has-structure"><strong>0. Why Music Has
+Structure</strong></h1>
+<p>Music may feel like cultural invention, but its foundations come
+directly from:</p>
+<ul>
+<li><strong>physics</strong> (vibration &amp; overtones)</li>
+<li><strong>mathematics</strong> (simple ratios → stable intervals)</li>
+<li><strong>geometry</strong> (how chords relate in space)</li>
+<li><strong>perception</strong> (why tension &amp; release feel
+natural)</li>
+</ul>
+<p>This set of notes follows how these ideas build into scales, modes,
+triads, tuning, harmonic motion, and practical musicianship.</p>
+<hr />
+<h1 id="sound-overtones-and-generating-intervals"><strong>1. Sound,
+Overtones, and Generating Intervals</strong></h1>
+<h2 id="the-harmonic-series"><strong>1.1 The harmonic
+series</strong></h2>
+<p>Every musical tone contains multiple frequencies vibrating together.
+These frequencies occur at integer multiples:</p>
+<blockquote>
+<p><strong>f, 2f, 3f, 4f, 5f, …</strong> <em>(Insert: diagram of
+harmonic series here)</em></p>
+</blockquote>
+<p>Important resulting intervals:</p>
+<ul>
+<li><strong>Octave</strong>: 2:1</li>
+<li><strong>Perfect 5th</strong>: 3:2</li>
+<li><strong>Perfect 4th</strong>: 4:3</li>
+</ul>
+<p>These are the first <em>highly consonant</em> intervals. They are
+stable because their waveforms align with minimal beating.</p>
+<p><em>(Placeholder for simple beats visualization HTML widget)</em></p>
+<hr />
+<h2 id="stacking-perfect-5ths-the-pythagorean-scale"><strong>1.2
+Stacking perfect 5ths → the Pythagorean scale</strong></h2>
+<p>If we repeatedly multiply by 3/2 and fold results into one
+octave:</p>
+<p><span
+class="math inline">(<em>f</em> × (3/2)<sup><em>n</em></sup> mod  2)</span></p>
+<p>we generate the <strong>circle of fifths</strong>.</p>
+<p><em>(Insert: circle of fifths diagram here)</em></p>
+<p>Selecting seven fifths in order gives the familiar diatonic notes.
+This is the origin of the <strong>Pythagorean scale</strong>.</p>
+<h3 id="triads-emerge-automatically">Triads emerge automatically</h3>
+<p>The overtone ratios 4:5:6 produce a <strong>major triad</strong>.
+Thus, consonant chords are <em>not invented</em> — they are discovered
+within the harmonic series.</p>
+<p><em>(Placeholder for diagram of 4:5:6 stacking into major
+chord)</em></p>
+<hr />
+<h1 id="tuning-systems-and-the-need-for-temperament"><strong>2. Tuning
+Systems and the Need for Temperament</strong></h1>
+<h2 id="why-tuning-is-impossible-to-perfect"><strong>2.1 Why tuning is
+impossible to perfect</strong></h2>
+<p>Stack twelve perfect 5ths:</p>
+<p><span
+class="math inline">((3/2)<sup>12</sup> ≠ 2<sup>7</sup>)</span></p>
+<p>This mismatch is the <strong>Pythagorean comma</strong>. As a
+consequence:</p>
+<blockquote>
+<p><strong>We cannot tune all intervals perfectly at once.</strong></p>
+</blockquote>
+<p><em>(Insert: equation comparison + graph of accumulating
+error)</em></p>
+<hr />
+<h2 id="equal-temperament-et-as-the-compromise"><strong>2.2 Equal
+Temperament (ET) as the compromise</strong></h2>
+<p>ET divides the octave into 12 equal ratios:</p>
+<blockquote>
+<p>( 2^{1/12} )</p>
+</blockquote>
+<p>Its benefits:</p>
+<ul>
+<li>every key sounds the same</li>
+<li>transposition and modulation become seamless</li>
+<li>geometric relationships between notes become uniform</li>
+</ul>
+<p>Downside: none of the intervals except the octave are perfectly
+pure.</p>
+<p><em>(Insert: table comparing pure vs ET interval ratios)</em></p>
+<hr />
+<h1 id="tetrachords-and-scale-construction"><strong>3. Tetrachords and
+Scale Construction</strong></h1>
+<h2 id="modern-pedagogical-tetrachords"><strong>3.1 Modern pedagogical
+tetrachords</strong></h2>
+<p>We adopt four patterns (not ancient Greek ones):</p>
+<ul>
+<li><strong>Ionian:</strong> W–W–H</li>
+<li><strong>Dorian:</strong> W–H–W</li>
+<li><strong>Phrygian:</strong> H–W–W</li>
+<li><strong>Lydian:</strong> W–W–W</li>
+</ul>
+<p><em>(Insert: diagram of whole/half steps inside a
+tetrachord)</em></p>
+<p>A <strong>scale</strong> = tetrachord + whole step + tetrachord.</p>
+<hr />
+<h2 id="two-fundamental-generative-sequences"><strong>3.2 Two
+fundamental generative sequences</strong></h2>
+<h3 id="a.-the-moving-window"><strong>A. The Moving Window</strong></h3>
+<p>Take a major scale and begin on each degree:</p>
+<blockquote>
+<p>Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian.</p>
+</blockquote>
+<p><em>(Insert: interactive HTML keyboard/mouse-over showing each
+mode)</em></p>
+<p>This is the <strong>modal perspective</strong> familiar today.</p>
+<hr />
+<h3 id="b.-combining-tetrachord-types"><strong>B. Combining Tetrachord
+Types</strong></h3>
+<p>Scale = lower tetrachord + upper tetrachord.</p>
+<p>Examples:</p>
+<ul>
+<li>Ionian + Ionian → <strong>Major</strong></li>
+<li>Lydian + Ionian → <strong>Lydian</strong></li>
+<li>Ionian + Dorian → <strong>Mixolydian</strong></li>
+<li>Dorian + Phrygian → <strong>Minor</strong></li>
+</ul>
+<p>This reveals the <strong>architectural symmetry</strong> inside the
+diatonic system.</p>
+<p><em>(Insert: diagram of tetrachord stacking, maybe a matrix)</em></p>
+<hr />
+<h1 id="geometry-of-chords-and-voice-leading"><strong>4. Geometry of
+Chords and Voice-Leading</strong></h1>
+<h2 id="the-tonnetz-triads-as-geometric-objects"><strong>4.1 The Tonnetz
+(triads as geometric objects)</strong></h2>
+<p>Arrange pitches so:</p>
+<ul>
+<li>horizontal direction = fifths</li>
+<li>diagonal directions = major/minor thirds</li>
+</ul>
+<p>Then each major/minor triad forms a small triangle.</p>
+<p><em>(Insert: Tonnetz grid diagram)</em></p>
+<p>This gives a <strong>visual map of harmonic space</strong>.</p>
+<hr />
+<h2 id="smooth-voice-leading-as-geometric-proximity"><strong>4.2 Smooth
+voice-leading as geometric proximity</strong></h2>
+<p>Chord changes sound smooth when their notes move short distances. On
+the Tonnetz, close-position triads are literally
+<strong>adjacent</strong>.</p>
+<p>This shows why certain progressions feel natural — they follow short
+geometric paths.</p>
+<p><em>(Insert: arrows showing common chord moves on Tonnetz)</em></p>
+<hr />
+<h1 id="the-resolution-principle"><strong>5. The Resolution
+Principle</strong></h1>
+<h2 id="why-dominant-tonic-resolves"><strong>5.1 Why dominant → tonic
+resolves</strong></h2>
+<p>Three factors:</p>
+<ol type="1">
+<li><strong>Leading tone</strong> moves by the smallest melodic
+interval</li>
+<li><strong>Chordal 7th</strong> falls downward</li>
+<li><strong>Overtones of V</strong> overlap with <strong>overtones of
+I</strong>, reducing beating</li>
+</ol>
+<p><em>(Insert: overtone overlap diagram)</em></p>
+<hr />
+<h2 id="tension-as-distance"><strong>5.2 Tension as
+“distance”</strong></h2>
+<p>Consonant chords = small distances in harmonic space Dissonant chords
+= larger distances Harmonic motion = navigating this space
+efficiently</p>
+<p><em>(Placeholder for simple interactive Tonnetz
+walk-through)</em></p>
+<hr />
+<h1 id="application-to-violin-minimal-but-essential"><strong>6.
+Application to Violin (Minimal but Essential)</strong></h1>
+<h2 id="tetrachords-left-hand-frames"><strong>6.1 Tetrachords =
+Left-Hand Frames</strong></h2>
+<p>Each tetrachord corresponds to a repeatable 4-finger pattern.
+Mastering these patterns improves:</p>
+<ul>
+<li>shifting</li>
+<li>scale fluency</li>
+<li>intonation consistency</li>
+</ul>
+<p><em>(Insert: hand-frame diagrams for the four tetrachords)</em></p>
+<hr />
+<h2 id="intonation-on-a-violin"><strong>6.2 Intonation on a
+violin</strong></h2>
+<p>String players often tune:</p>
+<ul>
+<li>4ths &amp; 5ths <strong>pure</strong> for resonance</li>
+<li>3rds <strong>just</strong> when harmonizing</li>
+<li>melodic intervals <strong>expressively</strong>, not rigidly ET</li>
+</ul>
+<p>Understanding the underlying acoustics helps maintain good
+intonation.</p>
+<p><em>(Insert: audio comparison pure vs ET intervals)</em></p>
+<hr />
+<h1 id="end-of-notes-minimal-version"><strong>End of Notes (Minimal
+Version)</strong></h1>
+<p>When you’re ready, we can:</p>
+<ul>
+<li>expand any section</li>
+<li>add missing context</li>
+<li>write extended commentary</li>
+<li>build full diagrams/HTML widgets</li>
+</ul>
+<p>Would you like to continue with diagrams, examples, or a more
+detailed draft next?</p>
+<p><span class="math inline">(2<sup>1/12</sup>)</span></p>
+<p>Its benefits:</p>
+<ul>
+<li><p>every key sounds the same</p></li>
+<li><p>transposition and modulation become seamless</p></li>
+<li><p>geometric relationships between notes become uniform</p></li>
+</ul>
+<p>Downside:<br />
+none of the intervals except the octave are perfectly pure.</p>
+<p><em>(Insert: table comparing pure vs ET interval ratios)</em></p>
+<hr />
+<h1 id="tetrachords-and-scale-construction-1"><strong>3. Tetrachords and
+Scale Construction</strong></h1>
+<h2 id="modern-pedagogical-tetrachords-1"><strong>3.1 Modern pedagogical
+tetrachords</strong></h2>
+<p>We adopt four patterns (not ancient Greek ones):</p>
+<ul>
+<li><p><strong>Ionian:</strong> W–W–H</p></li>
+<li><p><strong>Dorian:</strong> W–H–W</p></li>
+<li><p><strong>Phrygian:</strong> H–W–W</p></li>
+<li><p><strong>Lydian:</strong> W–W–W</p></li>
+</ul>
+<p><em>(Insert: diagram of whole/half steps inside a
+tetrachord)</em></p>
+<p>A <strong>scale</strong> = tetrachord + whole step + tetrachord.</p>
+<hr />
+<h2 id="two-fundamental-generative-sequences-1"><strong>3.2 Two
+fundamental generative sequences</strong></h2>
+<h3 id="a.-the-moving-window-1"><strong>A. The Moving
+Window</strong></h3>
+<p>Take a major scale and begin on each degree:</p>
+<blockquote>
+<p>Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian.</p>
+</blockquote>
+<p><em>(Insert: interactive HTML keyboard/mouse-over showing each
+mode)</em></p>
+<p>This is the <strong>modal perspective</strong> familiar today.</p>
+<hr />
+<h3 id="b.-combining-tetrachord-types-1"><strong>B. Combining Tetrachord
+Types</strong></h3>
+<p>Scale = lower tetrachord + upper tetrachord.</p>
+<p>Examples:</p>
+<ul>
+<li><p>Ionian + Ionian → <strong>Major</strong></p></li>
+<li><p>Lydian + Ionian → <strong>Lydian</strong></p></li>
+<li><p>Ionian + Dorian → <strong>Mixolydian</strong></p></li>
+<li><p>Dorian + Phrygian → <strong>Minor</strong></p></li>
+</ul>
+<p>This reveals the <strong>architectural symmetry</strong> inside the
+diatonic system.</p>
+<p><em>(Insert: diagram of tetrachord stacking, maybe a matrix)</em></p>
+<hr />
+<h1 id="geometry-of-chords-and-voice-leading-1"><strong>4. Geometry of
+Chords and Voice-Leading</strong></h1>
+<h2 id="the-tonnetz-triads-as-geometric-objects-1"><strong>4.1 The
+Tonnetz (triads as geometric objects)</strong></h2>
+<p>Arrange pitches so:</p>
+<ul>
+<li><p>horizontal direction = fifths</p></li>
+<li><p>diagonal directions = major/minor thirds</p></li>
+</ul>
+<p>Then each major/minor triad forms a small triangle.</p>
+<p>Tonnetz grid diagram</p>
+<iframe src="https://www.madmusicalscience.com/tradtonnetz.html" title="Traditional Tonnetz interactive" style="width:100%;height:600px;border:1px solid #ccc;border-radius:4px;" loading="lazy" sandbox="allow-same-origin allow-scripts allow-forms allow-popups">
+Your browser does not support iframes — view the Tonnetz here:
+<a href="https://www.madmusicalscience.com/tradtonnetz.html" target="_blank" rel="noopener noreferrer">Traditional
+Tonnetz</a>
+</iframe>
+<p>This gives a <strong>visual map of harmonic space</strong>.</p>
+<hr />
+<h2 id="smooth-voice-leading-as-geometric-proximity-1"><strong>4.2
+Smooth voice-leading as geometric proximity</strong></h2>
+<p>Chord changes sound smooth when their notes move short
+distances.<br />
+On the Tonnetz, close-position triads are literally
+<strong>adjacent</strong>.</p>
+<p>This shows why certain progressions feel natural — they follow short
+geometric paths.</p>
+<p><em>(Insert: arrows showing common chord moves on Tonnetz)</em></p>
+<hr />
+<h1 id="the-resolution-principle-1"><strong>5. The Resolution
+Principle</strong></h1>
+<h2 id="why-dominant-tonic-resolves-1"><strong>5.1 Why dominant → tonic
+resolves</strong></h2>
+<p>Three factors:</p>
+<ol type="1">
+<li><p><strong>Leading tone</strong> moves by the smallest melodic
+interval</p></li>
+<li><p><strong>Chordal 7th</strong> falls downward</p></li>
+<li><p><strong>Overtones of V</strong> overlap with <strong>overtones of
+I</strong>, reducing beating</p></li>
+</ol>
+<p><em>(Insert: overtone overlap diagram)</em></p>
+<hr />
+<h2 id="tension-as-distance-1"><strong>5.2 Tension as
+“distance”</strong></h2>
+<p>Consonant chords = small distances in harmonic space<br />
+Dissonant chords = larger distances<br />
+Harmonic motion = navigating this space efficiently</p>
+<p><em>(Placeholder for simple interactive Tonnetz
+walk-through)</em></p>
+<hr />
+<h1 id="application-to-violin-minimal-but-essential-1"><strong>6.
+Application to Violin (Minimal but Essential)</strong></h1>
+<h2 id="tetrachords-left-hand-frames-1"><strong>6.1 Tetrachords =
+Left-Hand Frames</strong></h2>
+<p>Each tetrachord corresponds to a repeatable 4-finger pattern.<br />
+Mastering these patterns improves:</p>
+<ul>
+<li><p>shifting</p></li>
+<li><p>scale fluency</p></li>
+<li><p>intonation consistency</p></li>
+</ul>
+<p><em>(Insert: hand-frame diagrams for the four tetrachords)</em></p>
+<hr />
+<h2 id="intonation-on-a-violin-1"><strong>6.2 Intonation on a
+violin</strong></h2>
+<p>String players often tune:</p>
+<ul>
+<li><p>4ths &amp; 5ths <strong>pure</strong> for resonance</p></li>
+<li><p>3rds <strong>just</strong> when harmonizing</p></li>
+<li><p>melodic intervals <strong>expressively</strong>, not rigidly
+ET</p></li>
+</ul>
+<p>Understanding the underlying acoustics helps maintain good
+intonation.</p>
+<p><em>(Insert: audio comparison pure vs ET intervals)</em></p>
+<hr />
+<h1 id="end-of-notes-minimal-version-1"><strong>End of Notes (Minimal
+Version)</strong></h1>
+<p>When you’re ready, we can:</p>
+<ul>
+<li><p>expand any section</p></li>
+<li><p>add missing context</p></li>
+<li><p>write extended commentary</p></li>
+<li><p>build full diagrams/HTML widgets</p></li>
+</ul>
+</body>
+</html>
