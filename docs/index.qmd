@@ -1,0 +1,8 @@
+---
+title: Musifold
+subtitle: Internalizing Walks on the Musical Manifold
+---
+
+## Tutorials
+
+- [Fundamentals](tutorials/fundamentals/fundamentals.qmd): sound, tuning, scales, chord geometry and resolution, with notes for violin. It is also available as [slides](tutorials/fundamentals/fundamentals-slides.html).

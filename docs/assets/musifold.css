@@ -1,0 +1,113 @@
+/* Musifold interactive widgets. Shared by the website page and the reveal.js deck. */
+
+.mf-widget {
+  --mf-ink: #1f2933;
+  --mf-muted: #6b7785;
+  --mf-faint: #d9dee4;
+  --mf-panel: #f7f8fa;
+  --mf-accent: #2f6fdf;
+  --mf-accent-2: #e0702b;
+  --mf-accent-3: #2a9d6f;
+  --mf-accent-4: #a347c4;
+  --mf-glow: rgba(47, 111, 223, 0.18);
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--mf-ink);
+  background: var(--mf-panel);
+  border: 1px solid var(--mf-faint);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 1rem 0 1.25rem;
+}
+
+.reveal .mf-widget {
+  font-size: 17px;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.mf-widget svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.reveal .mf-widget svg { max-height: 340px; }
+
+.mf-widget svg text {
+  font-family: inherit;
+  fill: var(--mf-ink);
+}
+
+.mf-caption {
+  color: var(--mf-muted);
+  font-size: 0.9em;
+  margin-top: 6px;
+}
+
+.mf-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: 4px 0 8px;
+}
+
+.mf-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mf-muted);
+  font-size: 0.92em;
+}
+
+.mf-widget button {
+  font: inherit;
+  font-size: 0.9em;
+  line-height: 1.2;
+  color: var(--mf-ink);
+  background: #fff;
+  border: 1px solid var(--mf-faint);
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin: 0;
+  cursor: pointer;
+  text-transform: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.mf-widget button:hover { border-color: var(--mf-accent); }
+
+.mf-widget button.mf-on {
+  background: var(--mf-accent);
+  border-color: var(--mf-accent);
+  color: #fff;
+}
+
+.mf-widget select,
+.mf-widget input[type="range"] {
+  font: inherit;
+  font-size: 0.9em;
+}
+
+.mf-widget input[type="range"] { width: 160px; accent-color: var(--mf-accent); }
+
+.mf-readout {
+  font-variant-numeric: tabular-nums;
+  color: var(--mf-ink);
+  font-size: 0.92em;
+}
+
+.mf-readout b { color: var(--mf-accent); }
+
+.mf-clickable { cursor: pointer; }
+
+.mf-noscript {
+  color: var(--mf-muted);
+  font-style: italic;
+}

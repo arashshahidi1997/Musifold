@@ -1,0 +1,285 @@
+---
+title: "Music Theory Fundamentals"
+subtitle: "A Minimal Narrative"
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/acoustics.js"></script>
+          <script src="../../assets/widgets/scales.js"></script>
+          <script src="../../assets/widgets/tonnetz.js"></script>
+  revealjs:
+    output-file: fundamentals-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/acoustics.js"></script>
+          <script src="../../assets/widgets/scales.js"></script>
+          <script src="../../assets/widgets/tonnetz.js"></script>
+---
+
+# 0. Why Music Has Structure
+
+Music may feel like cultural invention, but its foundations come directly from:
+
+* **physics** (vibration & overtones)
+* **mathematics** (simple ratios → stable intervals)
+* **geometry** (how chords relate in space)
+* **perception** (why tension & release feel natural)
+
+This set of notes follows how these ideas build into scales, modes, triads, tuning, harmonic motion, and practical musicianship.
+
+# 1. Sound, Overtones, and Generating Intervals
+
+## 1.1 The harmonic series
+
+Every musical tone contains multiple frequencies vibrating together.
+These frequencies occur at integer multiples:
+
+> **f, 2f, 3f, 4f, 5f, …**
+
+::: {.mf-widget data-widget="harmonic-series"}
+[Interactive figure: the first eight modes of a vibrating string. It needs JavaScript.]{.mf-noscript}
+:::
+
+Important resulting intervals:
+
+* **Octave**: 2:1
+* **Perfect 5th**: 3:2
+* **Perfect 4th**: 4:3
+
+These are the first *highly consonant* intervals.
+They are stable because their waveforms align with minimal beating.
+
+## Hearing consonance as an absence of beats
+
+Two tones whose frequencies are close but not equal interfere: the sound swells and fades at their *difference* frequency. For a pure ratio like 3:2, the overtones of the two notes land exactly on top of each other, so there is nothing to beat. Mistune the interval and the overlapping overtones start to wobble.
+
+::: {.mf-widget data-widget="beats"}
+[Interactive figure: overtone spectra of two notes and the beating between them. It needs JavaScript.]{.mf-noscript}
+:::
+
+## 1.2 Stacking perfect 5ths → the Pythagorean scale
+
+If we repeatedly multiply by 3/2 and fold results into one octave:
+
+$$
+f \times (3/2)^n \bmod 2
+$$
+
+we generate the **circle of fifths**.
+
+::: {.mf-widget data-widget="fifths-circle"}
+[Interactive figure: stacking perfect fifths around a one-octave pitch circle. It needs JavaScript.]{.mf-noscript}
+:::
+
+Selecting seven fifths in order gives the familiar diatonic notes.
+This is the origin of the **Pythagorean scale**.
+
+## Triads emerge automatically
+
+The overtone ratios 4:5:6 produce a **major triad**.
+Thus, consonant chords are *not invented* — they are discovered within the harmonic series.
+
+::: {.mf-widget data-widget="triad-456"}
+[Interactive figure: harmonics 4, 5 and 6 forming a major triad. It needs JavaScript.]{.mf-noscript}
+:::
+
+# 2. Tuning Systems and the Need for Temperament
+
+## 2.1 Why tuning is impossible to perfect
+
+Stack twelve perfect 5ths:
+
+$$
+(3/2)^{12} \neq 2^7
+$$
+
+This mismatch is the **Pythagorean comma**.
+As a consequence:
+
+> **We cannot tune all intervals perfectly at once.**
+
+::: {.mf-widget data-widget="comma"}
+[Interactive figure: the error accumulated by twelve pure fifths. It needs JavaScript.]{.mf-noscript}
+:::
+
+## 2.2 Equal Temperament (ET) as the compromise
+
+ET divides the octave into 12 equal ratios:
+
+$$
+2^{1/12}
+$$
+
+Its benefits:
+
+* every key sounds the same
+* transposition and modulation become seamless
+* geometric relationships between notes become uniform
+
+Downside:
+none of the intervals except the octave are perfectly pure.
+
+| Interval | Pure ratio | Pure (cents) | ET ratio | ET (cents) | ET − pure |
+|---|---|---:|---:|---:|---:|
+| Minor 3rd | 6:5 | 315.6 | 1.1892 | 300 | −15.6 |
+| Major 3rd | 5:4 | 386.3 | 1.2599 | 400 | +13.7 |
+| Perfect 4th | 4:3 | 498.0 | 1.3348 | 500 | +2.0 |
+| Perfect 5th | 3:2 | 702.0 | 1.4983 | 700 | −2.0 |
+| Major 6th | 5:3 | 884.4 | 1.6818 | 900 | +15.6 |
+| Octave | 2:1 | 1200 | 2 | 1200 | 0 |
+
+Fifths and fourths are off by only 2 cents, which is barely audible. Thirds and sixths are off by 14–16 cents, enough to beat clearly (you can compare them in [6.2](#intonation-on-a-violin)).
+
+# 3. Tetrachords and Scale Construction
+
+## 3.1 Modern pedagogical tetrachords
+
+We adopt four patterns (not ancient Greek ones):
+
+* **Ionian:** W–W–H
+* **Dorian:** W–H–W
+* **Phrygian:** H–W–W
+* **Lydian:** W–W–W
+
+::: {.mf-widget data-widget="tetrachords"}
+[Interactive figure: the four tetrachords on a keyboard, with their whole and half steps. It needs JavaScript.]{.mf-noscript}
+:::
+
+A **scale** = tetrachord + whole step + tetrachord.
+
+## 3.2 Two fundamental generative sequences
+
+### A. The Moving Window
+
+Take a major scale and begin on each degree:
+
+> Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian.
+
+::: {.mf-widget data-widget="mode-window"}
+[Interactive figure: a window sliding along the white keys to show each mode. It needs JavaScript.]{.mf-noscript}
+:::
+
+This is the **modal perspective** familiar today.
+
+---
+
+### B. Combining Tetrachord Types
+
+Scale = lower tetrachord + upper tetrachord.
+
+Examples:
+
+* Ionian + Ionian → **Major**
+* Lydian + Ionian → **Lydian**
+* Ionian + Dorian → **Mixolydian**
+* Dorian + Phrygian → **Minor**
+
+This reveals the **architectural symmetry** inside the diatonic system.
+
+::: {.mf-widget data-widget="tetrachord-matrix"}
+[Interactive figure: every combination of lower and upper tetrachord. It needs JavaScript.]{.mf-noscript}
+:::
+
+# 4. Geometry of Chords and Voice-Leading
+
+## 4.1 The Tonnetz (triads as geometric objects)
+
+Arrange pitches so:
+
+* horizontal direction = fifths
+* diagonal directions = major/minor thirds
+
+Then each major/minor triad forms a small triangle.
+
+::: {.mf-widget data-widget="tonnetz" data-mode="explore"}
+[Interactive figure: a clickable Tonnetz lattice. It needs JavaScript.]{.mf-noscript}
+:::
+
+This gives a **visual map of harmonic space**.
+
+## Interactive Tonnetz
+
+<iframe src="https://www.madmusicalscience.com/tradtonnetz.html"
+    title="Interactive Tonnetz"
+    style="width:100%;height:500px;border:1px solid #ccc;border-radius:4px;"
+    loading="lazy"
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups">
+  Your browser does not support iframes — view it here:
+  <a href="https://www.madmusicalscience.com/tradtonnetz.html" target="_blank" rel="noopener noreferrer">Interactive Tonnetz</a>
+</iframe>
+
+[Open interactive Tonnetz](https://www.madmusicalscience.com/tradtonnetz.html)
+
+## 4.2 Smooth voice-leading as geometric proximity
+
+Chord changes sound smooth when their notes move short distances.
+On the Tonnetz, close-position triads are literally **adjacent**.
+
+This shows why certain progressions feel natural — they follow short geometric paths.
+
+::: {.mf-widget data-widget="tonnetz" data-mode="progression"}
+[Interactive figure: chord progressions animated as paths on the Tonnetz. It needs JavaScript.]{.mf-noscript}
+:::
+
+# 5. The Resolution Principle
+
+## 5.1 Why dominant → tonic resolves
+
+Three factors:
+
+1. **Leading tone** moves by the smallest melodic interval
+2. **Chordal 7th** falls downward
+3. **Overtones of V** overlap with **overtones of I**, reducing beating
+
+::: {.mf-widget data-widget="resolution"}
+[Interactive figure: the voices of G7 resolving to C, and the overtones the two chords share. It needs JavaScript.]{.mf-noscript}
+:::
+
+## 5.2 Tension as “distance”
+
+* Consonant chords = small distances in harmonic space
+* Dissonant chords = larger distances
+* Harmonic motion = navigating this space efficiently
+
+::: {.mf-widget data-widget="tonnetz" data-mode="walk"}
+[Interactive figure: a Tonnetz walk with the voice movement of each step. It needs JavaScript.]{.mf-noscript}
+:::
+
+# 6. Application to Violin (Minimal but Essential)
+
+## 6.1 Tetrachords = Left-Hand Frames
+
+Each tetrachord corresponds to a repeatable 4-finger pattern.
+Mastering these patterns improves:
+
+* shifting
+* scale fluency
+* intonation consistency
+
+::: {.mf-widget data-widget="violin-frames"}
+[Interactive figure: the four tetrachord frames on a violin fingerboard. It needs JavaScript.]{.mf-noscript}
+:::
+
+## 6.2 Intonation on a violin
+
+String players often tune:
+
+* 4ths & 5ths **pure** for resonance
+* 3rds **just** when harmonizing
+* melodic intervals **expressively**, not rigidly ET
+
+Understanding the underlying acoustics helps maintain good intonation.
+
+::: {.mf-widget data-widget="intonation"}
+[Interactive figure: pure and equal-tempered intervals compared by ear and in cents. It needs JavaScript.]{.mf-noscript}
+:::

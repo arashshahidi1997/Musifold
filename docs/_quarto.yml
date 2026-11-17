@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "**/*.qmd"
+  resources:
+    - assets/**
+
+website:
+  title: Musifold
+  site-url: https://arashshahidi1997.github.io/Musifold/
+  repo-url: https://github.com/arashshahidi1997/Musifold
+  repo-actions: [source, issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Overview
+  sidebar:
+    style: docked
+    contents:
+      - index.qmd
+      - section: Tutorials
+        contents:
+          - tutorials/fundamentals/fundamentals.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
