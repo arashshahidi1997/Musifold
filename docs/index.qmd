@@ -1,8 +1,103 @@
 ---
-title: Musifold
-subtitle: Internalizing Walks on the Musical Manifold
+pagetitle: Musifold
+description: Interactive music theory. Sound, tuning, scales and harmony as geometry you can see, hear and play.
+toc: false
+format:
+  html:
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="assets/musifold.css">
+          <link rel="stylesheet" href="assets/home.css">
+    include-after-body:
+      - text: |
+          <script src="assets/musifold.js"></script>
+          <script src="assets/widgets/tonnetz.js"></script>
 ---
+
+::: {.mf-hero}
+[Interactive music theory]{.mf-eyebrow}
+
+[Musifold]{.mf-hero-title}
+
+[Internalizing walks on the musical manifold.]{.mf-hero-tagline}
+
+Music theory as geometry you can **see**, **hear** and **play**. Every idea
+comes with an interactive figure: click it, listen to it, and walk through
+harmonic space until the patterns feel familiar.
+
+::: {.mf-hero-actions}
+[Start with Fundamentals →](tutorials/fundamentals/fundamentals.qmd){.btn .btn-primary}
+[View as slides](tutorials/fundamentals/fundamentals-slides.html){.btn .btn-outline-secondary}
+:::
+:::
+
+## Try it
+
+Every major and minor chord is a triangle on this lattice, the *Tonnetz*.
+**Click any triangle** to hear the chord and light up the three chords that
+share two of its notes. Moving between neighbours is what smooth harmony
+sounds like.
+
+::: {.mf-widget data-widget="tonnetz" data-mode="explore"}
+[Interactive figure: a clickable Tonnetz lattice. It needs JavaScript.]{.mf-noscript}
+:::
 
 ## Tutorials
 
-- [Fundamentals](tutorials/fundamentals/fundamentals.qmd): sound, tuning, scales, chord geometry and resolution, with notes for violin. It is also available as [slides](tutorials/fundamentals/fundamentals-slides.html).
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 .mf-card}
+[Available]{.mf-badge}
+
+### Music Theory Fundamentals
+
+From the harmonic series to the Tonnetz: why some intervals sound stable,
+why no tuning is perfect, how scales and modes are built, and why chords
+resolve. With notes for violin.
+
+[7 chapters · 14 interactive figures · page and slides]{.mf-meta}
+
+[Read](tutorials/fundamentals/fundamentals.qmd){.btn .btn-sm .btn-primary}
+[Slides](tutorials/fundamentals/fundamentals-slides.html){.btn .btn-sm .btn-outline-secondary}
+:::
+
+::: {.g-col-12 .g-col-md-6 .mf-card .mf-card-soon}
+[In progress]{.mf-badge .mf-badge-soon}
+
+### Guitar Harmony
+
+Short lessons on the fretboard: the geometry of intervals across the
+strings, where the chords of a key live, voice leading, and the
+progressions that make music move.
+
+[21 lessons · playable fretboards]{.mf-meta}
+:::
+
+:::
+
+## How it works
+
+::: {.grid .mf-pillars}
+
+::: {.g-col-12 .g-col-md-4}
+#### See it
+Pitches, chords and keys drawn as shapes: circles of fifths, lattices of
+triads, and fretboards.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+#### Hear it
+Every figure makes sound, so you can check each idea by ear rather than
+take it on faith.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+#### Play it
+Exercises for the instrument in your hands, starting with violin and
+guitar.
+:::
+
+:::
+
+[Built with [Quarto](https://quarto.org). The figures are plain JavaScript
+and the Web Audio API, with no plugins. Turn your sound on.]{.mf-footnote}

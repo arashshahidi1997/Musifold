@@ -9,17 +9,29 @@ project:
 website:
   title: Musifold
   draft-mode: unlinked
+  description: Interactive music theory. Sound, tuning, scales and harmony as geometry you can see, hear and play.
+  favicon: assets/favicon.svg
+  open-graph: true
   site-url: https://arashshahidi1997.github.io/Musifold/
   repo-url: https://github.com/arashshahidi1997/Musifold
   repo-actions: [source, issue]
   navbar:
     left:
       - href: index.qmd
-        text: Overview
+        text: Home
+      - href: tutorials/fundamentals/fundamentals.qmd
+        text: Fundamentals
+    right:
+      - icon: github
+        href: https://github.com/arashshahidi1997/Musifold
+        aria-label: Musifold on GitHub
+  page-footer:
+    center: "Musifold · interactive music theory"
   sidebar:
     style: docked
     contents:
-      - index.qmd
+      - href: index.qmd
+        text: Home
       - section: Tutorials
         contents:
           - tutorials/fundamentals/fundamentals.qmd

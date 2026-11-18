@@ -1,0 +1,93 @@
+/* Home page: hero, tutorial cards and the see/hear/play strip. */
+
+.mf-hero {
+  margin: 0.5rem 0 2.5rem;
+  padding: 2.5rem 2rem 2rem;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(47, 111, 223, 0.16), transparent 45%),
+    radial-gradient(circle at 10% 90%, rgba(224, 112, 43, 0.12), transparent 40%),
+    #f7f8fa;
+  border: 1px solid #e3e7ec;
+}
+
+.mf-hero p { margin-bottom: 0.75rem; max-width: 42rem; }
+
+.mf-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2f6fdf;
+}
+
+.mf-hero-title {
+  display: block;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #1f2933;
+}
+
+.mf-hero-tagline {
+  display: block;
+  font-size: 1.25rem;
+  color: #52606d;
+  font-style: italic;
+}
+
+.mf-hero-actions { margin-top: 1.25rem; }
+.mf-hero-actions p { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; }
+
+.mf-card {
+  position: relative;
+  padding: 1.25rem 1.4rem 1.1rem;
+  border: 1px solid #e3e7ec;
+  border-radius: 12px;
+  background: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.mf-card:hover { box-shadow: 0 6px 22px rgba(31, 41, 51, 0.08); transform: translateY(-1px); }
+.mf-card h3 { margin-top: 0.4rem; border: none; }
+.mf-card .btn { margin-right: 0.35rem; }
+
+.mf-card-soon { background: #fafbfc; }
+.mf-card-soon:hover { box-shadow: none; transform: none; }
+
+.mf-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(42, 157, 111, 0.12);
+  color: #2a9d6f;
+}
+
+.mf-badge-soon { background: rgba(224, 112, 43, 0.12); color: #c45f22; }
+
+.mf-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7785;
+  margin-bottom: 0.75rem;
+}
+
+.mf-pillars h4 { margin-top: 0.25rem; color: #2f6fdf; }
+.mf-pillars p { color: #52606d; }
+
+.mf-footnote {
+  display: block;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e3e7ec;
+  font-size: 0.85rem;
+  color: #6b7785;
+}
+
+@media (max-width: 576px) {
+  .mf-hero { padding: 1.75rem 1.25rem 1.5rem; }
+}

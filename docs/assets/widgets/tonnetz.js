@@ -7,6 +7,18 @@
   const MAJOR = ["C", "D♭", "D", "E♭", "E", "F", "F♯", "G", "A♭", "A", "B♭", "B"];
   const MINOR = ["Cm", "C♯m", "Dm", "E♭m", "Em", "Fm", "F♯m", "Gm", "G♯m", "Am", "B♭m", "Bm"];
 
+  // Spell a triad from its root letter: root, 3rd two letters up, 5th four letters up.
+  const LETTERS = ["C", "D", "E", "F", "G", "A", "B"], LETTER_PC = [0, 2, 4, 5, 7, 9, 11];
+  function spellTriad(t) {
+    const rootName = (t.major ? MAJOR : MINOR)[t.root].replace(/m$/, "");
+    const li = LETTERS.indexOf(rootName[0]);
+    return [[0, 0], [t.major ? 4 : 3, 2], [7, 4]].map(([semis, steps]) => {
+      const l = (li + steps) % 7;
+      const d = mod(t.root + semis - LETTER_PC[l] + 6, 12) - 6;
+      return LETTERS[l] + ({ "-2": "♭♭", "-1": "♭", 0: "", 1: "♯", 2: "♯♯" })[d];
+    });
+  }
+
   const triadPcs = (t) => (t.major ? [t.root, t.root + 4, t.root + 7] : [t.root, t.root + 3, t.root + 7]).map((p) => mod(p, 12));
   const triadName = (t) => (t.major ? MAJOR[t.root] : MINOR[t.root]);
   const sameTriad = (a, b) => a.major === b.major && a.root === b.root;
@@ -141,7 +153,7 @@
         nb.forEach((n) => { const nt = nearestTri(L.tris, n.t, t.cx, t.cy); if (nt) nt.soft = true; });
         paint();
         M.chord(voicing(t.triad), { dur: 1.6 });
-        const notes = triadPcs(t.triad).map(M.pcName).join(" ");
+        const notes = spellTriad(t.triad).join(" ");
         readout.innerHTML = `<b>${triadName(t.triad)}</b> = ${notes}. Its edge-neighbours each share two notes: ` +
           nb.map((n) => `${triadName(n.t)} (${n.op})`).join(", ") + ".";
       }));
