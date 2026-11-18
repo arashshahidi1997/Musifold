@@ -42,6 +42,11 @@ The figures in the notes are dependency-free JavaScript widgets (SVG + Web Audio
   ```
   A note that uses widgets must load the CSS and scripts in its front matter, for **both** `html` and `revealjs` (`include-in-header` / `include-after-body`; see `fundamentals.qmd`). The paths are relative to the rendered page.
 - Widgets draw into a fixed `viewBox` (usually 720 wide) that scales to the column width. Keep them roughly 350px tall or less so they fit on a slide. The deck uses `smaller: true` and `scrollable: true`.
+- Guitar widgets:
+  - `widgets/guitar.js` holds the fretboard engine (`Musifold.guitar.fretboard`): standard tuning, frets 0–15, right-handed, high E on top, with a shared, remembered "low E on top" setting. Widgets draw in `fb.render`, which re-runs on orientation change.
+  - `widgets/guitar-chords.js` holds the chord engine: `parseChord` spells chords properly, and `candidates`/`choose` pick E- or A-string barre or shell voicings nearest the previous chord. It also holds the reusable **`progression`** widget. Configure it with `data-chords`/`data-labels`/`data-note`, or with `data-presets="Name = chords | labels | note ; …"`. Preset notes must not contain `;`. A chord token can force a voicing with `@` (e.g. `Am7@x05555`).
+  - `guitar-chords.js` must load after `guitar.js`.
+- Drafts use `draft: true` with `draft-mode: unlinked` (set in `_quarto.yml`): they render but aren't in the nav or search, and are still reachable by URL once pushed.
 - Browsers cache the JS/CSS, so after editing them hard-reload the page (or add a `?v=` query) when checking changes.
 - `inbox/` holds scratch and reference notes. It is not part of the site. `img-guide.md` there is written for Marp, which the project no longer uses. Its `{style="..."}` image attributes still work in Quarto, but Marp-only syntax such as `![bg ...]` does not.
 

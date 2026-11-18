@@ -126,6 +126,33 @@
     });
   }
 
+  // A plucked string: instant attack, exponential decay, brighter than `tone`.
+  function pluck(freq, { at = 0, dur = 1.8, gain = 0.22 } = {}) {
+    const ac = audio();
+    if (!ac) return;
+    const t0 = ac.currentTime + at;
+    const env = ac.createGain();
+    env.gain.setValueAtTime(0, t0);
+    env.gain.linearRampToValueAtTime(gain, t0 + 0.004);
+    env.gain.exponentialRampToValueAtTime(0.0008, t0 + dur);
+    env.connect(master);
+    const partials = [1, 0.6, 0.4, 0.25, 0.16, 0.1, 0.06];
+    const total = partials.reduce((a, b) => a + b, 0);
+    partials.forEach((amp, i) => {
+      const f = freq * (i + 1);
+      if (f > 10000) return;
+      const osc = ac.createOscillator();
+      const g = ac.createGain();
+      osc.frequency.value = f;
+      // upper partials die away faster, like a real string
+      g.gain.setValueAtTime(amp / total, t0);
+      g.gain.exponentialRampToValueAtTime(Math.max(1e-4, (amp / total) * 0.02), t0 + dur / (1 + i * 0.6));
+      osc.connect(g).connect(env);
+      osc.start(t0);
+      osc.stop(t0 + dur + 0.05);
+    });
+  }
+
   function chord(freqs, opts = {}) {
     const gain = (opts.gain || 0.22) / Math.sqrt(freqs.length);
     freqs.forEach((f) => tone(f, { ...opts, gain }));
@@ -267,7 +294,7 @@
     register, mountAll,
     svg, el, canvas, controls, button, toggleGroup, slider, caption,
     NOTE_NAMES, mod, midiToHz, cents, pcName, midiName,
-    audio, tone, chord, sequence, drone, RICH,
+    audio, tone, pluck, chord, sequence, drone, RICH,
     animate, stepper, ease, lerp,
   };
 })();

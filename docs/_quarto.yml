@@ -8,6 +8,7 @@ project:
 
 website:
   title: Musifold
+  draft-mode: unlinked
   site-url: https://arashshahidi1997.github.io/Musifold/
   repo-url: https://github.com/arashshahidi1997/Musifold
   repo-actions: [source, issue]

@@ -97,6 +97,11 @@
 
 .mf-widget input[type="range"] { width: 160px; accent-color: var(--mf-accent); }
 
+.mf-controls .mf-setting {
+  margin-left: auto;
+  font-size: 0.85em;
+}
+
 .mf-readout {
   font-variant-numeric: tabular-nums;
   color: var(--mf-ink);
