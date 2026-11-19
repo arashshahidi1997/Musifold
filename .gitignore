@@ -3,3 +3,10 @@
 /docs/_site/
 /papers/
 /answers/
+
+# manager board (rewritten every round)
+/.scratch/
+# copies of the user-level manager skills, and local preview config
+/.claude/skills/project-manager/
+/.claude/skills/manager-setup/
+/.claude/launch.json

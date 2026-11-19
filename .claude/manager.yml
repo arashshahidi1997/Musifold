@@ -1,0 +1,34 @@
+# Manager config: the machine keys the project-manager helpers (incoming.py, round.py, procs.py) read.
+# Lives at .claude/manager.yml (any project) or .projio/manager.yml (a projio project); $MANAGER_CONFIG overrides.
+# Every key has a default and a folder that does not exist is skipped. Check what is in use with
+#   python3 .claude/skills/project-manager/round.py config
+# The prose half of the adapter is the skill named in adapter_skill.
+prefix: "musifold-"                     # session titles start with it; the standing manager is "musifold-manager"
+adapter_skill: musifold-manager
+incoming:                               # no other project drops notes here (inbox/ is the user's own scratch)
+  dirs: []
+  title_prefix: "[from "
+  body_markers: []
+  open_statuses: [open]
+  cited_by:
+    globs: []
+    git_log: true
+handoffs:
+  dir: handoffs                         # at the repo root, outside docs/ (the website source); the repo is public
+board:
+  path: .scratch/musifold-manager-board.md   # gitignored; `round.py board` rewrites it
+units:                                  # longest path prefix wins; group paths so two sessions in one unit show as a collision
+  - name: fundamentals
+    paths: [docs/tutorials/fundamentals, docs/assets/widgets/acoustics.js, docs/assets/widgets/scales.js, docs/assets/widgets/tonnetz.js]
+  - name: guitar
+    paths: [docs/tutorials/guitar-harmony, docs/assets/widgets/guitar.js, docs/assets/widgets/guitar-chords.js, docs/assets/widgets/move-graph.js]
+  - name: core
+    paths: [docs/assets/musifold.js, docs/assets/musifold.css]
+  - name: site
+    paths: [docs/_quarto.yml, docs/index.qmd, docs/assets/home.css, docs/assets/favicon.svg, docs/.gitignore, .github]
+  - name: research
+    paths: [papers, answers, inbox]
+  - name: meta
+    paths: [CLAUDE.md, README.md, .gitignore, .gitattributes, .claude, handoffs]
+procs:
+  protect: ["^SCREEN", "^tmux", "quarto preview"]   # the live-reload preview server is never proposed for a kill
