@@ -14,8 +14,11 @@ metadata:
 
 # musifold-manager: the adapter
 
-**Load the core first:** the `project-manager` skill
-(`.claude/skills/project-manager/SKILL.md`). This file only fills in what is
+**Load the core first:** the `projio-workflow:project-manager` skill (from
+the `projio-workflow` plugin). Its helpers live in the plugin cache; set
+`PM=$(ls -d ~/.claude/plugins/cache/projio/projio-workflow/*/skills/project-manager | sort -V | tail -1)`
+and run `python3 $PM/round.py` wherever the core says
+`.claude/skills/project-manager/`. This file only fills in what is
 specific to Musifold; the core's rules are not repeated here. Machine keys
 are in `.claude/manager.yml`. Project conventions (build, widgets, drafts,
 git-annex) are in `CLAUDE.md`.
@@ -26,14 +29,14 @@ git-annex) are in `CLAUDE.md`.
 - Work sessions: `musifold-<unit> · <item>`, for example `musifold-guitar · hub + cluster pages`.
   Units are those in `.claude/manager.yml`: fundamentals, guitar, core, site, research, meta.
 - Opener: read the handoff named in the kickoff by its path (`handoffs/handoff-…md`), then `CLAUDE.md`.
-  Wrap: commit by path, write a handoff in `handoffs/` from the
-  `manager-setup` template (series = the unit), and send the core's
+  Wrap: the `projio-workflow:session-wrap` skill: commit by path, write a handoff in `handoffs/` from the
+  `projio-workflow:manager-setup` template `templates/handoff.md` (series = the unit), and send the core's
   three-line report to `musifold-manager`.
 - Working copy: `/home/arash/Documents/music/projects/Musifold` (XPS laptop; the only clone).
 
 ## Board
 
-`.scratch/musifold-manager-board.md` (gitignored). Refresh with `round.py board`, open it with
+`.scratch/musifold-manager-board.md` (gitignored). Refresh with `python3 $PM/round.py board`, open it with
 `show_pane(pane="file", path=".scratch/musifold-manager-board.md")`. Other managers in Sync:
 
 - `worklog-manager` · XPS · `local_702219f3-60cf-400e-9fe4-ac05d82de619` (cross-project; report up only to decide / needs / blocked)

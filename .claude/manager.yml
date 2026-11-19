@@ -1,7 +1,8 @@
 # Manager config: the machine keys the project-manager helpers (incoming.py, round.py, procs.py) read.
 # Lives at .claude/manager.yml (any project) or .projio/manager.yml (a projio project); $MANAGER_CONFIG overrides.
 # Every key has a default and a folder that does not exist is skipped. Check what is in use with
-#   python3 .claude/skills/project-manager/round.py config
+#   PM=$(ls -d ~/.claude/plugins/cache/projio/projio-workflow/*/skills/project-manager | sort -V | tail -1)
+#   python3 $PM/round.py config      (helpers come from the projio-workflow plugin)
 # The prose half of the adapter is the skill named in adapter_skill.
 prefix: "musifold-"                     # session titles start with it; the standing manager is "musifold-manager"
 adapter_skill: musifold-manager
