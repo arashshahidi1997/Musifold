@@ -39,7 +39,7 @@ git-annex) are in `CLAUDE.md`.
 `.scratch/musifold-manager-board.md` (gitignored). Refresh with `python3 $PM/round.py board`, open it with
 `show_pane(pane="file", path=".scratch/musifold-manager-board.md")`. Other managers in Sync:
 
-- `worklog-manager` · XPS · `local_702219f3-60cf-400e-9fe4-ac05d82de619` (cross-project; report up only to decide / needs / blocked)
+- `persolog-manager` · XPS · `local_d1d7fac3-f345-4985-89de-e2379bf20c6a` (the up-line since 2026-11-19: Musifold is personal. Send only decide / needs / blocked and closing items it hands over; no digests. Where the core's "Reporting up" says worklog-manager, read persolog-manager. Never report to worklog-manager or any work manager. Its rules: `~/dev/persolog/.claude/skills/persolog-manager/SKILL.md`)
 - `inf-manager` · XPS · `local_6078ca0c-d5be-469e-9d3e-ca41d867df74` (machine and Python environments; conda is gone, use uv or pixi)
 - `viz-manager` · XPS · `local_016ef55d-817d-473f-8332-7cfa57bb26b4` (finished visuals; requests go through the `viz-draft` skill)
 - `lit-manager` · XPS · `local_63182342-5810-4f90-82c3-4260dc6979d8` (literature studio)
