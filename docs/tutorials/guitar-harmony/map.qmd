@@ -1,0 +1,71 @@
+---
+title: "Guitar Harmony"
+subtitle: "A fretboard guide: the move map"
+draft: true
+toc: false
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+Most harmony "tricks" are **moves**: ways of getting from one chord to the
+next while each finger travels as little as possible. Tymoczko's *A Geometry
+of Music* explains why so few moves do so much work. Stepwise voices and
+consistent chords leave only a few options, and the familiar chords (triads
+and 7ths) divide the octave almost evenly, so they link up by small moves.
+
+This map groups the moves by **how the voices move**, not by topic. Start
+anywhere, follow a **path**, or pick a **song** to see which moves it uses
+and hear its progression.
+
+::: {.mf-widget data-widget="move-graph"}
+[Interactive figure: the move map. It needs JavaScript.]{.mf-noscript}
+:::
+
+# The five clusters
+
+Each cluster has a page and a slide deck. The lessons in them are short: an
+idea, how it looks on the neck, an interactive fretboard, songs that use the
+move, and something to **try**.
+
+| Cluster | What moves | Page | Slides |
+|---|---|---|---|
+| Space | nothing: where notes live | [Space](space.html) | [deck](space-slides.html) |
+| Hold & step | two voices hold, one steps | [Hold & step](hold-step.html) | [deck](hold-step-slides.html) |
+| Fifth motion | the root falls a fifth | [Fifth motion](fifth-motion.html) | [deck](fifth-motion-slides.html) |
+| Symmetry moves | nearly even chords slide | [Symmetry moves](symmetry.html) | [deck](symmetry-slides.html) |
+| Parallel slides | the whole shape moves | [Parallel slides](parallel.html) | [deck](parallel-slides.html) |
+
+## How to read the diagrams
+
+In chord diagrams the dots are labelled by **degree** (R = root, 3, 5, ♭7, …),
+colored the same way throughout. When a progression plays, a **gold ring**
+marks a note that stays put and an **orange line** marks a note that moves by
+a step. Standard tuning (E A D G B E), high E at the top; tick *⚙ low E on
+top* on any fretboard to flip them all.
+
+## Drills
+
+- I–IV–V in every key using only the L shape ([Where the chords of a key live](space.html#key-map))
+- ii–V–I in shells, major and minor, roots on both strings ([Shells and guide tones](fifth-motion.html#guide-tones))
+- Harmonize one melody note six ways ([One note, three roles](space.html#one-note-three-roles))
+- One chord, five CAGED positions, up and down ([CAGED](space.html#caged))
+- Each secondary dominant into its target, in three keys ([Secondary dominants](fifth-motion.html#secondary-dominants))
+
+<!--
+Parked ideas (not on the map until they have a lesson):
+- Common-tone diminished: C – C°7 – C
+- Modal "signature" chords: Dorian i–IV, Lydian I–II, Phrygian i–♭II
+- Backdoor progression: iv7 – ♭VII7 – I
+- Pedal point and walking bass lines; slash chords and inversions
+- Minor circle of fifths: i – iv – ♭VII – ♭III – ♭VI – ii° – V – i
+- Strummed audio (strings staggered)
+- Then: remove `draft: true`, add the cluster pages to the navbar and index.
+-->

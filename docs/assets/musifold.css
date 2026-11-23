@@ -116,3 +116,19 @@
   color: var(--mf-muted);
   font-style: italic;
 }
+
+/* Move graph card */
+.mf-graph-card {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--mf-faint);
+  border-radius: 8px;
+}
+.mf-graph-card p { margin: 6px 0; }
+.mf-graph-card .mf-widget { margin: 8px 0; }
+.mf-graph-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.mf-graph-tag { color: #fff; font-size: 0.75em; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.mf-graph-title { font-size: 1.1em; }
+.mf-graph-sig { font-size: 0.8em; color: var(--mf-muted); border: 1px solid var(--mf-faint); border-radius: 999px; padding: 1px 8px; }
+.mf-widget select { max-width: 100%; }

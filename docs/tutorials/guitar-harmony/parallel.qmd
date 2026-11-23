@@ -1,0 +1,70 @@
+---
+title: "Parallel slides"
+subtitle: "The whole shape moves"
+draft: true
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+  revealjs:
+    output-file: parallel-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+# Overview
+
+When every voice moves the same way, the chord keeps its shape and **slides** along the neck. This cluster covers the borrowed major chords ♭VII and ♭VI, and the Andalusian descent.
+
+Back to [the move map](map.html). Standard tuning, high E at the top (tick *⚙ low E on top* on any fretboard to flip them all); every figure plays sound.
+
+# Lessons
+
+## ♭VII and ♭VI {#flat-vii-and-flat-vi}
+
+Two borrowed major chords from the parallel minor that you slide as a whole shape:
+
+- **♭VII** (B♭ in C): a whole step below the tonic, the rock and Mixolydian sound, I → ♭VII → IV → I. On the neck, slide the tonic shape **down two frets**.
+- **♭VI → ♭VII → I** (A♭ → B♭ → C): a triumphant cadence, the same barre sliding **up in whole steps**.
+- **V → ♭VI**: a deceptive cadence that also borrows (compare [Cadences](fifth-motion.html#cadences)).
+
+::: {.mf-widget data-widget="progression" data-position="3" data-presets="♭VII = C B♭ F C | I ♭VII IV I; ♭VI–♭VII–I = C A♭ B♭ C | I ♭VI ♭VII I; V → ♭VI = C G7 A♭ | I V7 ♭VI"}
+[Interactive figure: ♭VII and ♭VI. It needs JavaScript.]{.mf-noscript}
+:::
+
+For the borrowed iv, where only one note changes, see [Borrowed iv](hold-step.html#borrowed-iv).
+
+::: {.mf-widget data-widget="songs" data-moves="flat7,flat67"}
+[Songs: Super Mario Bros. fanfare, Sweet Child o' Mine. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## The Andalusian cadence {#andalusian-cadence}
+
+**i → ♭VII → ♭VI → V** (Am → G → F → E): a bass line stepping down the minor
+scale, ending on a **major** V borrowed from harmonic minor. Its G♯ pulls
+back to A. On the neck it is the same barre shape stepping down, the sound of
+flamenco.
+
+::: {.mf-widget data-widget="progression" data-position="5" data-loop="" data-chords="Am G F E" data-labels="i ♭VII ♭VI V"}
+[Interactive figure: the Andalusian cadence. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="andalusian"}
+[Songs: Sultans of Swing, Hit the Road Jack, California Dreamin'. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+

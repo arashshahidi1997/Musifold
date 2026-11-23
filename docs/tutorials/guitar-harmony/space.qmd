@@ -1,0 +1,125 @@
+---
+title: "Space"
+subtitle: "Where notes live on the fretboard"
+draft: true
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+  revealjs:
+    output-file: space-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+# Overview
+
+The fretboard is a grid. Learn a few **geometric facts** (how intervals look between strings) and chords stop being shapes to memorize and become things you can work out anywhere on the neck. This cluster is the map itself: intervals, where the chords of a key sit, the five CAGED positions, and the three roles one note can play.
+
+Back to [the move map](map.html). Standard tuning, high E at the top (tick *⚙ low E on top* on any fretboard to flip them all); every figure plays sound.
+
+# Lessons
+
+## Strings are a fourth apart, except one {#string-intervals}
+
+Neighbouring strings are a **perfect 4th** (5 frets) apart, except **G → B**,
+which is a **major 3rd** (4 frets).
+
+**The B-string rule:** any shape that crosses from G to B moves **one fret
+higher** on the far side. Every "exception" in guitar geometry is this rule.
+
+::: {.mf-widget data-widget="string-intervals"}
+[Interactive figure: interval shapes walking across the strings, showing the B-string shift. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** pick *Octave* and walk it across the strings. Notice the jump from +2
+to +3 frets.
+
+## Interval shapes {#interval-shapes}
+
+From a note to a higher (thinner) string:
+
+| Interval | Shape | Crossing G→B |
+|---|---|---|
+| Perfect 4th | next string, **same fret** | +1 |
+| Perfect 5th | next string, **+2** | +3 |
+| Major 3rd | next string, **−1** | same fret |
+| Minor 3rd | next string, **−2** | −1 |
+| Octave | skip a string, **+2** | **+3** |
+| Minor 10th | three strings over, **same fret** | +1 |
+| Major 10th | three strings over, **+1** | **+2** |
+
+The 10ths (a 3rd plus an octave) give the wide, open sound of the plucked chords in
+*Road Trippin'* (Red Hot Chili Peppers), where each chord's pattern is in 10ths. From A→B and D→high E the B string adds a fret, which is why
+those shapes are "one or two frets forward".
+
+::: {.mf-widget data-widget="interval-finder"}
+[Interactive figure: click a fret to see its octaves, 5ths, 4ths, 3rds and 10ths. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** click a note on the A string, then find its octave on the G string
+and its major 10th on the B string without looking.
+
+::: {.mf-widget data-widget="songs" data-moves="octaves"}
+[Songs: Road Trippin' (10ths). They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Where the chords of a key live {#key-map}
+
+Find the tonic, and the other chords sit in a fixed pattern around it:
+
+- **I, IV, V** make an **L** across two strings.
+- **ii and vi** sit two frets above I and V.
+- **vi** (the relative minor) is **3 frets below** the tonic on the same string.
+- With the tonic on the 5th string, **V is directly above it** on the 6th string, same fret.
+
+::: {.mf-widget data-widget="key-map"}
+[Interactive figure: the diatonic chords of a key laid out on the neck. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** pick a key, close your eyes, find I–vi–IV–V, then check.
+
+::: {.mf-widget data-widget="songs" data-moves="keymap"}
+[Songs: La Bamba (I–IV–V). They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## One note, three roles {#one-note-three-roles}
+
+Any note can be the **root**, the **3rd** or the **5th** of a chord, and each
+of those can be major or minor. That gives six chords for every melody note.
+For C: C and Cm (root), A♭ and Am (3rd), F and Fm (5th).
+
+::: {.mf-widget data-widget="chord-roles"}
+[Interactive figure: pick a note and its role to see the chord built around it. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** pick a note on the high E string and harmonize it all six ways
+without moving your hand more than a few frets.
+
+## The same chord in five places (CAGED) {#caged}
+
+Every major or minor chord can be played with the shape of an open **C, A, G,
+E or D** chord moved up the neck. The five shapes interlock: the top of one is
+the bottom of the next.
+
+::: {.mf-widget data-widget="caged"}
+[Interactive figure: one chord in its five CAGED positions. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** play one chord in all five positions going up the neck, then come back down.
+

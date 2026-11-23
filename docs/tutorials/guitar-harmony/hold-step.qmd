@@ -1,0 +1,147 @@
+---
+title: "Hold & step"
+subtitle: "Two voices hold, one steps"
+draft: true
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+  revealjs:
+    output-file: hold-step-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+# Overview
+
+Most of the smoothest chord changes keep **two notes where they are** and move one by a step. Here are the neighbour triads, third substitution, the borrowed iv, line clichés, suspensions, and the pop loop that strings several of these together.
+
+Back to [the move map](map.html). Standard tuning, high E at the top (tick *⚙ low E on top* on any fretboard to flip them all); every figure plays sound.
+
+# Lessons
+
+## Neighbour triads {#neighbour-triads}
+
+A major triad and a minor triad can share two notes. Every major triad has
+three minor **neighbours**, each reached by moving **one note** while the other two stay:
+
+- **Parallel** (C → Cm): the 3rd drops a half step, E → E♭.
+- **Relative** (C → Am): the 5th rises a whole step, G → A.
+- **Leading-tone exchange** (C → Em): the root drops a half step, C → B.
+
+These are the shortest possible moves between two triads, which is why they
+sound so smooth. On the neck, **one finger moves and the rest stay**.
+
+::: {.mf-widget data-widget="progression" data-position="5" data-presets="Parallel = C Cm C | I i I | E drops to E♭ and back.; Relative = C Am C | I vi I | G rises to A and back.; Leading-tone exchange = C Em C | I iii I | C drops to B and back."}
+[Interactive figure: the three neighbour moves of C major. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** play each preset and watch which note moves (orange line) and which two hold (gold rings).
+
+## Third substitution {#third-substitution}
+
+Swap a chord for the one **a third away**: it shares two notes, so it can
+do the same job with one note changed.
+
+- **vi for I** (Am for C): C and E stay, G rises to A. This is the deceptive cadence (see [Cadences](fifth-motion.html#cadences)).
+- **iii for I** (Em for C): E and G stay, C falls to B.
+- **ii for IV** (Dm for F): F and A stay, C falls to D. Both lead into V.
+
+Tymoczko calls this classical *third substitution*. It is the neighbour-triad
+move ([Neighbour triads](#neighbour-triads)) used on the chords of a key.
+
+::: {.mf-widget data-widget="progression" data-position="5" data-presets="vi for I = C F G7 Am | I IV V7 vi | After G7 the ear expects C, and Am keeps C and E.; ii for IV = C Dm G7 C | I ii V7 I | Dm shares F and A with F and does the same job.; iii for I = C Em F G | I iii IV V | Em holds E and G, and C falls to B."}
+[Interactive figure: third substitutions in C major. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** play I–IV–V7–I, then swap one chord at a time for its third-away neighbour.
+
+## Borrowed iv {#borrowed-iv}
+
+Borrow chords from the **parallel minor** (C minor's chords in C major) and a
+major key gets darker colors. The smallest borrow is **iv** (Fm in C): the
+IV chord with one note lowered, the A♭ sighing down to G. This is the "minor
+plagal" cadence.
+
+::: {.mf-widget data-widget="progression" data-position="3" data-presets="iv = C F Fm C | I IV iv I | A (in F) sighs to A♭ (in Fm), then to G."}
+[Interactive figure: the borrowed iv. It needs JavaScript.]{.mf-noscript}
+:::
+
+The other borrowed chords (♭VII, ♭VI) slide a whole shape instead: see
+[♭VII and ♭VI](parallel.html#flat-vii-and-flat-vi).
+
+::: {.mf-widget data-widget="songs" data-moves="iv"}
+[Songs: Creep, In My Life. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Line clichés {#line-cliches}
+
+Hold a chord and move **one inner voice chromatically**: one finger walks
+while everything else stays. Over a minor chord the line descends
+(A → G♯ → G → F♯). Over a major chord it climbs (G → G♯ → A → B♭).
+
+::: {.mf-widget data-widget="progression" data-presets="Minor = Am@x07555 Ammaj7@x06555 Am7@x05555 Am6@x04555 | i i(maj7) i7 i6 | The line is on the D string: A, G♯, G, F♯.; Major = C@x32010 Caug@x32110 C6@x32210 C7@x32310 | I I+ I6 I7 | The line is on the G string: G, G♯, A, B♭. C7 then wants to go to F."}
+[Interactive figure: line clichés over a minor and a major chord. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="cliche"}
+[Songs: My Funny Valentine. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Suspended chords {#suspended-chords}
+
+A **sus4** swaps the 3rd for the 4th (a **sus2** for the 2nd). With no 3rd,
+the chord is neither major nor minor, and it wants to settle.
+
+- **Vsus4 → V → I** delays the leading tone.
+- **V7 → Isus4 → I** is the classic **4–3 suspension**. The 7th of V7 (F in
+  G7) is *held* into the tonic as its 4th, then falls to the 3rd.
+- In minor, the sus chord can land on **i**, or on a major **I** for a bright
+  ending: the **Picardy third**.
+
+::: {.mf-widget data-widget="progression" data-presets="4–3 suspension = G7 Csus4 C | V7 Isus4 I | F is held from G7 into Csus4, then falls to E.; Vsus4 → V → I = C Gsus4 G C | I Vsus4 V I | The 4th (C) falls to the 3rd (B), which then rises to the tonic.; Minor, then Picardy = Cm G7 Csus4 Cm G7 Csus4 C | i V7 isus4 i V7 isus4 I | Same suspension, but the second time it resolves to C major."}
+[Interactive figure: suspended chords resolving. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="sus"}
+[Songs: Time of the Season, Pinball Wizard. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Pop axis loop {#pop-axis-loop}
+
+**I–V–vi–IV** (C G Am F) is the loop behind countless pop songs, and every
+move in it is small:
+
+- **I → V**: G holds, C → B and E → D step down.
+- **V → vi**: the deceptive step, every voice rises by step.
+- **vi → IV**: a third substitution ([Third substitution](#third-substitution)): A and C hold, E → F.
+- **IV → I**: C holds, F → E and A → G step down.
+
+Its **rotations** start the same loop elsewhere: vi–IV–I–V, IV–I–V–vi, V–vi–IV–I.
+On the neck it is four barre shapes in one area, so the loop stays under your hand.
+
+::: {.mf-widget data-widget="progression" data-position="5" data-loop="" data-presets="I–V–vi–IV = C G Am F | I V vi IV; vi–IV–I–V = Am F C G | vi IV I V; IV–I–V–vi = F C G Am | IV I V vi; V–vi–IV–I = G Am F C | V vi IV I"}
+[Interactive figure: the pop axis loop and its rotations. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** play all four rotations on the same four shapes, and notice which one feels like "home".
+
+::: {.mf-widget data-widget="songs" data-moves="popaxis"}
+[Songs: With or Without You, Someone Like You. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+

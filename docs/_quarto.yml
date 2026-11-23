@@ -35,6 +35,14 @@ website:
       - section: Tutorials
         contents:
           - tutorials/fundamentals/fundamentals.qmd
+          - section: Guitar Harmony
+            contents:
+              - tutorials/guitar-harmony/map.qmd
+              - tutorials/guitar-harmony/space.qmd
+              - tutorials/guitar-harmony/hold-step.qmd
+              - tutorials/guitar-harmony/fifth-motion.qmd
+              - tutorials/guitar-harmony/symmetry.qmd
+              - tutorials/guitar-harmony/parallel.qmd
 
 format:
   html:

@@ -1,0 +1,183 @@
+---
+title: "Fifth motion"
+subtitle: "The root falls a fifth"
+draft: true
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+  revealjs:
+    output-file: fifth-motion-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+# Overview
+
+Root motion **down a fifth** (one string over, same fret) is the strongest move in tonal harmony. This cluster follows it from a single resolution to cadences, ii–V–I, secondary dominants, circles of fifths, the blues and the dominant chain.
+
+Back to [the move map](map.html). Standard tuning, high E at the top (tick *⚙ low E on top* on any fretboard to flip them all); every figure plays sound.
+
+# Lessons
+
+## One string over = a resolution {#one-string-over}
+
+Moving a root to the **next string at the same fret** raises it a 4th, which
+is the same note as a 5th lower. That is the root motion of **V → I**. Keep
+going and you walk the circle of fifths, alternating between 6th-string and
+5th-string shapes and drifting two frets down every two chords.
+
+::: {.mf-widget data-widget="progression" data-chords="G C F B♭ E♭" data-position="3" data-note="Dashed grey line: root motion. Every step is up a 4th (= down a 5th)."}
+[Interactive figure: roots walking around the circle of fifths across the strings. It needs JavaScript.]{.mf-noscript}
+:::
+
+## Seventh chords {#seventh-chords}
+
+Add a 7th to a triad and you get the chords that drive functional harmony:
+
+| Chord | Formula | Role |
+|---|---|---|
+| maj7 | 1 3 5 7 | restful I and IV |
+| 7 (dominant) | 1 3 5 ♭7 | tension that wants to resolve |
+| m7 | 1 ♭3 5 ♭7 | ii, iii, vi |
+| m7♭5 (ø7) | 1 ♭3 ♭5 ♭7 | vii in major, ii in minor |
+| °7 | 1 ♭3 ♭5 ♭♭7 | a leading-tone chord ([Symmetric chords](symmetry.html#symmetric-chords)) |
+
+::: {.mf-widget data-widget="chord-shapes" data-qualities="maj7,7,m7,m7b5,dim7"}
+[Interactive figure: seventh-chord shapes with the root on the 6th or 5th string. It needs JavaScript.]{.mf-noscript}
+:::
+
+## Shells and guide tones {#guide-tones}
+
+The **3rd and 7th** carry a seventh chord's identity, and the 5th adds little.
+A **shell** voicing keeps just root, 3rd and 7th: three notes, easy to move.
+
+In **ii–V–I**, the guide tones barely move: each chord's **7th falls a half
+step** to the next chord's **3rd** while the other guide tone holds.
+
+::: {.mf-widget data-widget="progression" data-voicing="shell" data-shells="toggle" data-presets="Major = Dm7 G7 Cmaj7 | ii7 V7 Imaj7 | C (7th of Dm7) falls to B (3rd of G7), then F (7th of G7) falls to E (3rd of Cmaj7).; Minor = Dm7b5 G7 Cm7 | iiø7 V7 i7 | The same guide-tone motion in minor."}
+[Interactive figure: ii–V–I in shell voicings, showing the guide-tone motion. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** switch between *Full* and *Shell*. Play the shells while a friend
+(or a looper) plays the roots.
+
+::: {.mf-widget data-widget="songs" data-moves="guide"}
+[Songs: Autumn Leaves. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Cadences: I, IV and V {#cadences}
+
+The three primary chords, and four ways a phrase can end:
+
+- **Authentic** V → I: the strongest close.
+- **Plagal** IV → I: the softer "amen".
+- **Deceptive** V → vi: you expect I and get its relative minor.
+- **Half cadence**: ending *on* V, which leaves the phrase open.
+
+::: {.mf-widget data-widget="progression" data-position="3" data-presets="Authentic = C F G7 C | I IV V7 I; Plagal = C F C | I IV I; Deceptive = C F G7 Am | I IV V7 vi; Half = C Am F G | I vi IV V"}
+[Interactive figure: the four cadences. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="cadence,keymap"}
+[Songs: La Bamba, In My Life. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## ii – V – I and its relatives {#ii-v-i}
+
+The core progression of functional harmony, and the variations worth knowing:
+
+::: {.mf-widget data-widget="progression" data-presets="ii–V–I = Dm G C | ii V I; With 7ths = Dm7 G7 Cmaj7 | ii7 V7 Imaj7; II–V–I = D7 G7 C | V7/V V7 I | ii made major: D7 is the V of V, a secondary dominant ([Secondary dominants](#secondary-dominants)).; Minor = Dm7b5 G7 Cm | iiø7 V7 i | In minor, ii is half-diminished.; Neapolitan = D♭ G7 Cm | ♭II V7 i | ♭II is a major triad on the lowered 2nd, usually played with F in the bass (N6)."}
+[Interactive figure: ii–V–I variations. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.callout-note collapse="true"}
+## Your notes, checked
+- *"ii7 > V > i"*: in minor, ii is naturally **half-diminished** (iiø7 = Dm7♭5).
+- *"iib7 > V > i (Neapolitan)"*: the Neapolitan is **♭II**, a major triad on
+  the lowered 2nd (D♭ F A♭ in C minor). It is not a 7th chord.
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="iiVI,neapolitan"}
+[Songs: Autumn Leaves, April in Paris. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Secondary dominants {#secondary-dominants}
+
+Any chord can be approached by **its own V7**. II–V–I ([ii–V–I](#ii-v-i)) and the
+I → I7 → IV move ([The dominant chain](#dominant-chain)) are two cases of one rule. Each secondary
+dominant adds a note from outside the key that leads into its target: G♯ → A,
+C♯ → D, F♯ → G.
+
+::: {.mf-widget data-widget="progression" data-position="3" data-presets="V7/vi = C E7 Am | I V7/vi vi | E7 is the III chord made dominant (see [Mediant moves](symmetry.html#mediant-moves)).; V7/ii = C A7 Dm | I V7/ii ii; V7/IV = C C7 F | I V7/IV IV; V7/V = C D7 G | I V7/V V; Chain = C E7 Am A7 Dm D7 G7 C | I V7/vi vi V7/ii ii V7/V V7 I | Every chord is preceded by its own dominant."}
+[Interactive figure: secondary dominants. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="secdom"}
+[Songs: Creep, In My Life, Sweet Georgia Brown. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Circles of fifths {#circles-of-fifths}
+
+Root motion **down a fifth** is the strongest move in tonal harmony. Chain it
+and you get long progressions that pull steadily home. On the neck it is
+[One string over](#one-string-over) again: one string over, same fret.
+
+::: {.mf-widget data-widget="progression" data-position="5" data-presets="Triads = Em Am Dm G C | iii vi ii V I; Sevenths = Em7 Am7 Dm7 G7 Cmaj7 | iii7 vi7 ii7 V7 Imaj7; All dominants = E7 A7 D7 G7 C | V7/vi V7/ii V7/V V7 I | Every chord is the dominant of the next."}
+[Interactive figure: circle-of-fifths progressions. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="circle"}
+[Songs: Autumn Leaves, Island in the Sun. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## The 12-bar blues {#twelve-bar-blues}
+
+The blues breaks the rules on purpose: **every chord is a dominant 7th**, even
+the tonic. Twelve bars, three chords:
+
+| I7 | I7 | I7 | I7 |
+|---|---|---|---|
+| **IV7** | **IV7** | **I7** | **I7** |
+| **V7** | **IV7** | **I7** | **V7** |
+
+::: {.mf-widget data-widget="progression" data-position="5" data-loop="" data-speed="1.0" data-chords="A7 A7 A7 A7 D7 D7 A7 A7 E7 D7 A7 E7" data-labels="I7 I7 I7 I7 IV7 IV7 I7 I7 V7 IV7 I7 V7" data-note="The last bar (V7) is the turnaround back to the top."}
+[Interactive figure: a 12-bar blues in A. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="blues"}
+[Songs: Johnny B. Goode. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## The dominant chain {#dominant-chain}
+
+1. Play **V7 → I** (G7 → C).
+2. Turn the I into a dominant 7th (C → **C7**). It is now the V7 of **IV**.
+3. Resolve (C7 → F), and repeat: F → F7 → B♭ → B♭7 → …
+4. After twelve keys you are back home.
+
+The roots alternate between the 6th and 5th strings ([One string over](#one-string-over)).
+
+::: {.mf-widget data-widget="progression" data-position="3" data-speed="1.0" data-chords="G7 C C7 F F7 B♭ B♭7 E♭ E♭7 A♭ A♭7 D♭ D♭7 G♭ G♭7 B B7 E E7 A A7 D D7 G" data-labels="V7 I V7 I V7 I V7 I V7 I V7 I V7 I V7 I V7 I V7 I V7 I"}
+[Interactive figure: the dominant chain through all twelve keys. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="chain"}
+[Songs: Sweet Georgia Brown. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+

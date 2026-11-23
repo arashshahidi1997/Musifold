@@ -1,0 +1,106 @@
+---
+title: "Symmetry moves"
+subtitle: "Chords that divide the octave almost evenly"
+draft: true
+format:
+  html:
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+  revealjs:
+    output-file: symmetry-slides.html
+    slide-number: true
+    scrollable: true
+    smaller: true
+    include-in-header:
+      - text: <link rel="stylesheet" href="../../assets/musifold.css">
+    include-after-body:
+      - text: |
+          <script src="../../assets/musifold.js"></script>
+          <script src="../../assets/widgets/guitar.js"></script>
+          <script src="../../assets/widgets/guitar-chords.js"></script>
+          <script src="../../assets/widgets/move-graph.js"></script>
+---
+
+# Overview
+
+Triads and seventh chords divide the octave nearly evenly, so they are close to their own transpositions. That is why a chord shape can **slide a few frets** and still connect: diminished and augmented chords, the tritone substitution and the chromatic mediants.
+
+Back to [the move map](map.html). Standard tuning, high E at the top (tick *⚙ low E on top* on any fretboard to flip them all); every figure plays sound.
+
+# Lessons
+
+## Symmetric chords: diminished and augmented {#symmetric-chords}
+
+The **diminished triad** sits on vii in major and ii in minor. **B° is G7
+without its G**, so it works as a dominant.
+
+The **diminished 7th** is stacked minor thirds, so it is symmetric: **slide it
+3 frets and you get the same four notes** in a new order. Any of those notes
+can be a leading tone, so **one shape resolves to four keys**.
+
+::: {.mf-widget data-widget="symmetric" data-type="dim7"}
+[Interactive figure: a diminished 7th sliding in 3-fret steps, with its four resolutions. It needs JavaScript.]{.mf-noscript}
+:::
+
+The **augmented** triad is stacked major thirds: it repeats every **4 frets**,
+and as a V+ (G B D♯) its raised 5th pushes up to the tonic's 3rd. It resolves
+three ways.
+
+::: {.mf-widget data-widget="symmetric" data-type="aug"}
+[Interactive figure: an augmented triad sliding in 4-fret steps, with its three resolutions. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="dim7,aug"}
+[Songs: Bennie and the Jets. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Tritone substitution {#tritone-substitution}
+
+G7 and **D♭7** share the same two guide tones: **B (= C♭) and F**, the
+tritone that makes a dominant restless. So D♭7 can replace G7. The bass then
+slides **down a half step** into the tonic instead of falling a fifth.
+
+On the neck, the substitute is the same 7th shape **6 frets away**.
+
+::: {.mf-widget data-widget="progression" data-voicing="shell" data-shells="toggle" data-presets="V7 → I = Dm7 G7 Cmaj7 | ii7 V7 Imaj7; Tritone sub = Dm7 D♭7 Cmaj7 | ii7 ♭II7 Imaj7 | The guide tones are the same as in G7, only the root changes."}
+[Interactive figure: a ii–V–I with and without the tritone substitute. It needs JavaScript.]{.mf-noscript}
+:::
+
+::: {.mf-widget data-widget="songs" data-moves="tritone"}
+[Songs: April in Paris, The Girl from Ipanema. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
+## Mediant moves: keep the tonic's quality {#mediant-moves}
+
+The chords on the 3rd and 6th degrees normally have the **opposite quality**
+to the tonic: iii and vi are minor in major, III and VI are major in minor.
+**Keep the tonic's quality instead** and you get a *chromatic mediant*.
+
+| Move | Diatonic (2 common tones) | Mediant (1 common tone) |
+|---|---|---|
+| I → III | C → Em | **C → E** |
+| I → VI | C → Am | **C → A** |
+| i → ♭iii | Cm → E♭ | **Cm → E♭m** |
+| i → ♭vi | Cm → A♭ | **Cm → A♭m** |
+
+One note stays and two move by step, so the move is smooth. But the new notes
+come from outside the key, which gives a bright, cinematic lift. In major,
+III and VI also work as secondary dominants ([Secondary dominants](fifth-motion.html#secondary-dominants)). **On the neck: keep
+the barre shape and slide it** (+4 or −3 frets in major, +3 or −4 in minor).
+
+::: {.mf-widget data-widget="progression" data-position="5" data-presets="Major, diatonic = C Em C Am C | I iii I vi I; Major, mediants = C E C A C | I III I VI I; Minor, diatonic = Cm E♭ Cm A♭ Cm | i III i VI i; Minor, mediants = Cm E♭m Cm A♭m Cm | i ♭iii i ♭vi i"}
+[Interactive figure: diatonic and chromatic mediant moves. It needs JavaScript.]{.mf-noscript}
+:::
+
+**Try:** play the diatonic preset, then the mediant one, and listen for the moment the music "lifts".
+
+::: {.mf-widget data-widget="songs" data-moves="mediant"}
+[Songs: Creep, Linus and Lucy. They play in the interactive version, which needs JavaScript.]{.mf-noscript}
+:::
+
