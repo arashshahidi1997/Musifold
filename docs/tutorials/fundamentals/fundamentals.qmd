@@ -18,6 +18,17 @@ format:
     smaller: true
     include-in-header:
       - text: <link rel="stylesheet" href="../../assets/musifold.css">
+      - text: |
+          <style>
+          /* Slides whose figure and controls would need a scroll at 1280x720: a shorter figure, tighter spacing. */
+          .reveal .compact .mf-widget svg { max-height: 215px; }
+          .reveal .compact .mf-widget { margin: 0.2rem 0; }
+          .reveal .compact blockquote { margin: 0.4em 0; padding: 0.1em 0.6em; }
+          .reveal .compact ul, .reveal .compact p { margin: 0.3em 0; }
+          /* The matrix slide is a "---" continuation of 3.2 and has no heading to carry the class. */
+          .reveal .mf-widget[data-widget="tetrachord-matrix"] svg { max-height: 215px; }
+          .reveal .mf-widget[data-widget="tetrachord-matrix"] { margin: 0.2rem 0; }
+          </style>
     include-after-body:
       - text: |
           <script src="../../assets/musifold.js"></script>
@@ -67,7 +78,7 @@ Two tones whose frequencies are close but not equal interfere: the sound swells 
 [Interactive figure: overtone spectra of two notes and the beating between them. It needs JavaScript.]{.mf-noscript}
 :::
 
-## 1.2 Stacking perfect 5ths → the Pythagorean scale
+## 1.2 Stacking perfect 5ths → the Pythagorean scale {.compact}
 
 If we repeatedly multiply by 3/2 and fold results into one octave:
 
@@ -95,7 +106,7 @@ Thus, consonant chords are *not invented* — they are discovered within the har
 
 # 2. Tuning Systems and the Need for Temperament
 
-## 2.1 Why tuning is impossible to perfect
+## 2.1 Why tuning is impossible to perfect {.compact}
 
 Stack twelve perfect 5ths:
 
@@ -142,7 +153,7 @@ Fifths and fourths are off by only 2 cents, which is barely audible. Thirds and 
 
 # 3. Tetrachords and Scale Construction
 
-## 3.1 Modern pedagogical tetrachords
+## 3.1 Modern pedagogical tetrachords {.compact}
 
 We adopt four patterns (not ancient Greek ones):
 
@@ -157,7 +168,7 @@ We adopt four patterns (not ancient Greek ones):
 
 A **scale** = tetrachord + whole step + tetrachord.
 
-## 3.2 Two fundamental generative sequences
+## 3.2 Two fundamental generative sequences {.compact}
 
 ### A. The Moving Window
 
@@ -192,7 +203,7 @@ This reveals the **architectural symmetry** inside the diatonic system.
 
 # 4. Geometry of Chords and Voice-Leading
 
-## 4.1 The Tonnetz (triads as geometric objects)
+## 4.1 The Tonnetz (triads as geometric objects) {.compact}
 
 Arrange pitches so:
 
@@ -257,7 +268,7 @@ Three factors:
 
 # 6. Application to Violin (Minimal but Essential)
 
-## 6.1 Tetrachords = Left-Hand Frames
+## 6.1 Tetrachords = Left-Hand Frames {.compact}
 
 Each tetrachord corresponds to a repeatable 4-finger pattern.
 Mastering these patterns improves:

@@ -5,6 +5,16 @@
   const M = window.Musifold;
   const { svg, el, canvas, controls, button, toggleGroup, caption } = M;
 
+  // Calls stop() when the widget leaves the screen: scrolled out of view on the page, or another slide in a deck
+  // (reveal.js keeps hidden slides "intersecting", so listen for its slidechanged event as well).
+  function onLeave(root, stop) {
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => entries.forEach((e) => { if (!e.isIntersecting) stop(); })).observe(root);
+    }
+    const slide = root.closest(".reveal .slides section");
+    if (slide) slide.closest(".reveal").addEventListener("slidechanged", () => { if (!slide.classList.contains("present")) stop(); });
+  }
+
   const WHITE_PCS = [0, 2, 4, 5, 7, 9, 11];
   const isWhite = (m) => WHITE_PCS.includes(M.mod(m, 12));
 
@@ -138,13 +148,16 @@
     const group = toggleGroup(ctl, MODES.map((m) => m.name), (i) => go(i));
     const ctl2 = controls(root);
     button(ctl2, "▶ Play scale", () => playScale());
+    const stopCycle = () => { if (cycling) { clearInterval(cycling); cycling = null; } cycleBtn.classList.remove("mf-on"); };
     const cycleBtn = button(ctl2, "⟳ Cycle through all", () => {
-      if (cycling) { clearInterval(cycling); cycling = null; cycleBtn.classList.remove("mf-on"); return; }
+      if (cycling) { stopCycle(); return; }
       cycleBtn.classList.add("mf-on");
       const next = () => { go((cur + 1) % 7); group.select(cur, false); playScale(); };
       playScale();
       cycling = setInterval(next, 3600);
     });
+    // The cycle must not keep playing once the widget is off screen (another slide, scrolled away).
+    onLeave(root, stopCycle);
     caption(root, "Slide an eight-note window along the white keys. The keys never change, but starting on a different degree moves the two half steps (H) to new places in the scale, and that changes its character.");
 
     function go(i) { from = M.lerp(from, cur, Math.min(1, t)); cur = i; t = 0; label(); }

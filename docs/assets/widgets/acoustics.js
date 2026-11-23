@@ -5,6 +5,16 @@
   const M = window.Musifold;
   const { svg, el, canvas, controls, button, toggleGroup, slider, caption } = M;
 
+  // Calls stop() when the widget leaves the screen: scrolled out of view on the page, or another slide in a deck
+  // (reveal.js keeps hidden slides "intersecting", so listen for its slidechanged event as well).
+  function onLeave(root, stop) {
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => entries.forEach((e) => { if (!e.isIntersecting) stop(); })).observe(root);
+    }
+    const slide = root.closest(".reveal .slides section");
+    if (slide) slide.closest(".reveal").addEventListener("slidechanged", () => { if (!slide.classList.contains("present")) stop(); });
+  }
+
   const C3 = M.midiToHz(48);
   const C4 = M.midiToHz(60);
 
@@ -124,6 +134,8 @@
       listen.textContent = drones ? "■ Stop" : "▶ Listen";
       listen.classList.toggle("mf-on", !!drones);
     });
+    // A held tone must not keep sounding once the widget is off screen (another slide, scrolled away).
+    onLeave(root, () => { if (drones) listen.click(); });
     button(ctl2, "Make it pure", () => { detuneInput.value = 0; state.detune = 0; update(); });
 
     const W = 720, H = 300;
@@ -265,6 +277,8 @@
       },
     });
     st.onchange = () => { play.textContent = st.playing ? "⏸ Pause" : "▶ Play"; };
+    // Stop stepping (and sounding) once the widget is off screen.
+    onLeave(root, () => { if (st.playing) st.pause(); });
 
     function drawStep(n, fresh) {
       const { ratio, k } = foldedFifth(n);
