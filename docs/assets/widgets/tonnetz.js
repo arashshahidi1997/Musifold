@@ -50,6 +50,16 @@
       : [{ op: "P", t: { root: t.root, major: true } }, { op: "R", t: { root: mod(t.root + 3, 12), major: true } }, { op: "L", t: { root: mod(t.root + 8, 12), major: true } }];
   }
 
+  // Name a neighbour of t from t's own letters: its root letter is a third (two letters) up or down from t's
+  // root letter, so the L-neighbour of B major is D♯m, not E♭m.
+  function neighbourName(t, n) {
+    const li = LETTERS.indexOf((t.major ? MAJOR : MINOR)[t.root][0]);
+    const up = (n.op === "L") === t.major || (n.op === "R" && !t.major);
+    const l = n.op === "P" ? li : mod(li + (up ? 2 : -2), 7);
+    const d = mod(n.t.root - LETTER_PC[l] + 6, 12) - 6;
+    return LETTERS[l] + ({ "-2": "♭♭", "-1": "♭", 0: "", 1: "♯", 2: "♯♯" })[d] + (n.t.major ? "" : "m");
+  }
+
   function voicing(t) {
     let r = 60 + t.root;
     if (r > 66) r -= 12;
@@ -155,7 +165,7 @@
         M.chord(voicing(t.triad), { dur: 1.6 });
         const notes = spellTriad(t.triad).join(" ");
         readout.innerHTML = `<b>${triadName(t.triad)}</b> = ${notes}. Its edge-neighbours each share two notes: ` +
-          nb.map((n) => `${triadName(n.t)} (${n.op})`).join(", ") + ".";
+          nb.map((n) => `${neighbourName(t.triad, n)} (${n.op})`).join(", ") + ".";
       }));
       readout.innerHTML = "Click any triangle. Upward triangles are major triads, downward ones are minor.";
       caption(root, "Each note sits a fifth from its horizontal neighbours and a third from its diagonal ones, so every triangle is a triad. The pattern repeats: the lattice really wraps around into a torus.");

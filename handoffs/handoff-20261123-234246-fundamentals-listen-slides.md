@@ -34,16 +34,15 @@ refs: ["handoff-20261119-020800-manager-setup.md"]
 
 **Left on the slides (not controls):** captions below the figure still need a scroll on 2.1, 3.2, the matrix and 6.1; the lower part of the figure on 1.1/beats (svg ends ~734 px) and 6.2/intonation (~736 px) is a few px below the fold, with their controls above it and reachable. The compact figures are smaller (215 px tall), so their in-figure text is smaller too; if that reads too small, a real fix is a shorter lead-in text or splitting the slide.
 
-**Noticed, not mine to fix here:** the home-page Tonnetz explore readout spells the relative of F♯ major as "E♭m" next to "F♯m" and "B♭m" (D♯m expected), so the root-spelling fix in `dd23ee5` does not cover the neighbour list (`tonnetz.js` `neighbours` spelling; same unit, small).
+**Follow-up, done at the manager's request:** the Tonnetz explore readout now names each neighbour from the clicked triad's own letters (`neighbourName` in `tonnetz.js`): the L-neighbour of B major is D♯m, the R-neighbour of F♯ is D♯m. Checked by clicking on the home page and on the Fundamentals page. Side effect: neighbours of flat-spelled triads can be exotic but correct (E♭m → C♭ for L). The progression and walk readouts still name chords from the fixed table.
 
 ## Next steps
 1. Listen once by ear through the page and the deck; re-open point 1 above if anything clicks or sounds off.
-2. Tonnetz neighbour spelling (E♭m vs D♯m) in `tonnetz.js`.
-3. Decide whether the 215 px figures on the compact slides are readable at a talk's projector size.
+2. Decide whether the 215 px figures on the compact slides are readable at a talk's projector size.
 
 Process notes for the manager: (a) `quarto preview` live-reload navigates the browser to whichever page another session last rendered, so a test tab got hijacked; I tested on `quarto render docs --output-dir <scratch>` plus `python3 -m http.server`. (b) Chrome cached the widget JS across renders (`fetch(url, {cache: "reload"})` refreshes it). (c) The browser window would not shrink below 1680×1006, so the deck was tested inside a 1280×720 iframe.
 
 ## Kickoff prompt
 ```text
-Title this session `musifold-fundamentals · tonnetz spelling + ear check`. Read handoffs/handoff-20261123-234246-fundamentals-listen-slides.md by its path, then CLAUDE.md. Unit: fundamentals (do not edit docs/assets/musifold.js or musifold.css). Continue from Next steps. Commit by path; do not push.
+Title this session `musifold-fundamentals · ear check`. Read handoffs/handoff-20261123-234246-fundamentals-listen-slides.md by its path, then CLAUDE.md. Unit: fundamentals (do not edit docs/assets/musifold.js or musifold.css). Continue from Next steps. Commit by path; do not push.
 ```
