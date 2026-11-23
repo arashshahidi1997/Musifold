@@ -1,3 +1,6 @@
+<!-- MARP-ONLY: written for Marp, which the project no longer uses (Musifold is Quarto now). The `{style="..."}`
+     image attributes below still work in Quarto; Marp-only syntax (`marp: true`, `![bg ...]`, directives) does not.
+     Not published (inbox/ is not part of the site). -->
 ---
 marp: true
 ---

@@ -30,6 +30,6 @@ units:                                  # longest path prefix wins; group paths 
   - name: research
     paths: [papers, answers, inbox]
   - name: meta
-    paths: [CLAUDE.md, README.md, .gitignore, .gitattributes, .claude, handoffs]
+    paths: [CLAUDE.md, README.md, PARKED.md, .gitignore, .gitattributes, .claude, handoffs]
 procs:
   protect: ["^SCREEN", "^tmux", "quarto preview"]   # the live-reload preview server is never proposed for a kill
