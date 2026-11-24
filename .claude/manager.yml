@@ -14,6 +14,7 @@ incoming:                               # no other project drops notes here (inb
   cited_by:
     globs: []
     git_log: true
+files_inbox: inbox                       # per-project file inbox (user decision 2026-11-24); gitignored except the tracked img-guide.md
 handoffs:
   dir: handoffs                         # at the repo root, outside docs/ (the website source); the repo is public
 board:

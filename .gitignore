@@ -4,6 +4,10 @@
 /papers/
 /answers/
 
+# file inbox (manager files_inbox); img-guide.md stays tracked
+/inbox/*
+!/inbox/img-guide.md
+
 # manager board (rewritten every round)
 /.scratch/
 # copies of the user-level manager skills, and local preview config

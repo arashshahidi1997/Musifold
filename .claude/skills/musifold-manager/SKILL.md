@@ -34,6 +34,12 @@ git-annex) are in `CLAUDE.md`.
   three-line report to `musifold-manager`.
 - Working copy: `/home/arash/Documents/music/projects/Musifold` (XPS laptop; the only clone).
 
+## Launching and core updates
+
+- Launching: on the user's go, start each kickoff with `start_session` (initiation user_asked, the kickoff's title, file boundaries in the prompt). If `start_session` is not available, fall back to the private hub's Launch button (http://127.0.0.1:8721, a `claude://code/new` deep link), then `claude -n "<title>" "<kickoff>"` in a terminal tab. Terminal sessions may not appear in `list_sessions`, so rely on their wrap reports.
+- Core updates: follow the core's "Core updates" section (`core update · <ver> · what changed · do:` messages arrive via persolog-manager).
+- File inbox: `inbox/` (`files_inbox` in `.claude/manager.yml`, user decision 2026-11-24). New files there are gitignored; the committed `inbox/img-guide.md` stays tracked. The round lists the files and proposes what to do with each.
+
 ## Board
 
 `.scratch/musifold-manager-board.md` (gitignored). Refresh with `python3 $PM/round.py board`, open it with
