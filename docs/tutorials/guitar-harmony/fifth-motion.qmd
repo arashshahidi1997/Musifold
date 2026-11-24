@@ -102,15 +102,14 @@ The three primary chords, and four ways a phrase can end:
 
 The core progression of functional harmony, and the variations worth knowing:
 
-::: {.mf-widget data-widget="progression" data-presets="ii–V–I = Dm G C | ii V I; With 7ths = Dm7 G7 Cmaj7 | ii7 V7 Imaj7; II–V–I = D7 G7 C | V7/V V7 I | ii made major: D7 is the V of V, a secondary dominant ([Secondary dominants](#secondary-dominants)).; Minor = Dm7b5 G7 Cm | iiø7 V7 i | In minor, ii is half-diminished.; Neapolitan = D♭ G7 Cm | ♭II V7 i | ♭II is a major triad on the lowered 2nd, usually played with F in the bass (N6)."}
+::: {.mf-widget data-widget="progression" data-presets="ii–V–I = Dm G C | ii V I; With 7ths = Dm7 G7 Cmaj7 | ii7 V7 Imaj7; II–V–I = D7 G7 C | V7/V V7 I | ii made major: D7 is the V of V, a secondary dominant ([Secondary dominants](#secondary-dominants)).; Minor = Dm7b5 G7 Cm | iiø7 V7 i | In minor, ii is half-diminished.; Neapolitan = D♭/F@x8666x G7 Cm | ♭II6 V7 i | ♭II is a major triad on the lowered 2nd, usually played in first inversion with F in the bass (N6)."}
 [Interactive figure: ii–V–I variations. It needs JavaScript.]{.mf-noscript}
 :::
 
 ::: {.callout-note collapse="true"}
-## Your notes, checked
-- *"ii7 > V > i"*: in minor, ii is naturally **half-diminished** (iiø7 = Dm7♭5).
-- *"iib7 > V > i (Neapolitan)"*: the Neapolitan is **♭II**, a major triad on
-  the lowered 2nd (D♭ F A♭ in C minor). It is not a 7th chord.
+## Common mix-ups
+- **In minor, ii is half-diminished.** The ii chord of a minor key is iiø7 (Dm7♭5 in C minor), not a plain minor 7th, so the minor ii–V–i reads iiø7 – V7 – i.
+- **The Neapolitan is ♭II, a major triad.** It sits on the lowered 2nd (D♭ F A♭ in C minor) and is not a 7th chord. It usually appears in first inversion, with F in the bass (N6), and goes to V.
 :::
 
 ::: {.mf-widget data-widget="songs" data-moves="iiVI,neapolitan"}

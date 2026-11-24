@@ -517,6 +517,10 @@
       res = tonic;
       target = parseChord(ROOT_NAMES[tonic] + (isAug || !resMinor ? "" : "m"));
       tv = choose(candidates(target), center(v.frets));
+      // respell the symmetric chord as seen from the target: vii°7 (G♯ B D F) or V+ (G B D♯)
+      const sp = isAug ? parseChord(spellFrom(target.root, 4, 7) + "+") : parseChord(spellFrom(target.root, 6, 11) + "°7");
+      const byPc = new Map(sp.tones.map((t) => [t.pc, t.name]));
+      chord = { ...chord, name: sp.name, tones: chord.tones.map((t) => ({ ...t, name: byPc.get(t.pc) || t.name })) };
       fb.refresh();
       strum(v.frets);
       setTimeout(() => strum(tv.frets), 700);

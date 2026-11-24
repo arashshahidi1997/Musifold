@@ -61,7 +61,7 @@
     { id: "blues", label: "12-bar blues", c: "fifth", x: 415, y: 210, lesson: "fifth-motion.html#twelve-bar-blues",
       sig: "all dominant 7ths", idea: "I7, IV7 and V7 over twelve bars. Even the tonic is a dominant 7th, so the usual rules are broken on purpose.", neck: "Three 7th shapes in one position." },
     { id: "neapolitan", label: "Neapolitan ♭II", c: "fifth", x: 415, y: 270, lesson: "fifth-motion.html#ii-v-i",
-      sig: "♭II for ii", idea: "A major triad on the lowered 2nd (D♭ in C minor) in place of ii, usually with the 3rd in the bass (N6).", neck: "A barre a half step above the tonic.", demo: "Cm D♭ G7 Cm | i ♭II V7 i" },
+      sig: "♭II for ii", idea: "A major triad on the lowered 2nd (D♭ in C minor) in place of ii, usually with the 3rd in the bass (N6).", neck: "A barre a half step above the tonic.", demo: "Cm D♭/F@x8666x G7 Cm | i ♭II6 V7 i" },
 
     // Symmetry
     { id: "mediant", label: "Chromatic mediants", c: "sym", x: 415, y: 358, lesson: "symmetry.html#mediant-moves",
@@ -201,6 +201,11 @@
     const W = 800, H = 470;
     const s = canvas(root, W, H);
     s.style.maxHeight = "520px";
+    // On a phone the 800-wide map would shrink to ~4px text: keep it at least 640px wide and let it scroll sideways.
+    const scroller = el("div", {}, root);
+    scroller.style.overflowX = "auto";
+    scroller.appendChild(s);
+    s.style.minWidth = "640px";
     const panel = el("div", { class: "mf-graph-card" }, root);
 
     function neighbours(id) {
