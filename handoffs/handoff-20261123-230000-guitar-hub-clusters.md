@@ -3,7 +3,7 @@ title: "guitar · hub + cluster pages"
 date: 2026-11-23
 timestamp: 20261123-230000
 series: "guitar"
-status: open
+status: consumed
 git_commit: "917e39b"
 refs: ["handoff-20261119-020800-manager-setup.md"]
 ---
